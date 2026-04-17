@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Silensia — Transform your mind through guided hypnotherapy sessions, mindfulness coaching, and audio-based relaxation programs." />
+  <title>Silensia — Hypnotherapy & Mindfulness</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/index.css" />
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+</head>
+<body>
+
+  <!-- ================================================
+       HEADER
+       ================================================ -->
+  <header class="site-header" id="site-header">
+
+    <!-- Left: Brand -->
+    <a href="index.html" class="nav-brand">
+      <svg class="nav-logo" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="36" height="36" rx="8" fill="hsl(245, 58%, 51%)"/>
+        <path d="M18 8C12.48 8 8 12.48 8 18s4.48 10 10 10 10-4.48 10-10S23.52 8 18 8zm0 16c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z" fill="white" opacity="0.9"/>
+        <circle cx="18" cy="18" r="3" fill="white"/>
+      </svg>
+      <span class="nav-brand-name">Silensia</span>
+    </a>
+
+    <!-- Center: Navigation Links -->
+    <nav class="nav-links" role="navigation" aria-label="Main navigation">
+      <ul>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle active">Home</a>
+          <ul class="dropdown-menu">
+            <li><a href="index.html">Home V1</a></li>
+            <li><a href="home-v2.html">Home V2</a></li>
+          </ul>
+        </li>
+        <li><a href="pages/about.html">About</a></li>
+        <li><a href="pages/journeys.html">Journeys</a></li>
+        <li><a href="pages/services.html">Services</a></li>
+        <li><a href="pages/contact.html">Contact</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Dashboard</a>
+          <ul class="dropdown-menu">
+            <li><a href="pages/user-dashboard.html">User Dashboard</a></li>
+            <li><a href="pages/admin-dashboard.html">Admin Dashboard</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Right: Actions -->
+    <div class="nav-actions">
+      <button class="theme-toggle" aria-label="Toggle theme" id="header-theme-toggle"></button>
+      <button class="rtl-toggle" aria-label="Toggle RTL" id="header-rtl-toggle"></button>
+      <a href="pages/login.html" class="nav-cta" id="header-cta">Get Started</a>
+    </div>
+
+    <!-- Hamburger (mobile/tablet only) -->
+    <button class="hamburger" aria-label="Open menu" aria-expanded="false" id="hamburger-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </header>
+
+  <!-- ================================================
+       SIDE NAV OVERLAY
+       ================================================ -->
+  <div class="sidenav-overlay" id="sidenav-overlay"></div>
+
+  <!-- ================================================
+       SIDE NAV DRAWER
+       ================================================ -->
+  <aside class="sidenav" id="sidenav" role="dialog" aria-label="Mobile navigation">
+
+    <!-- Sidenav Header -->
+    <div class="sidenav-header">
+      <a href="index.html" class="nav-brand">
+        <svg class="nav-logo" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="36" height="36" rx="8" fill="hsl(245, 58%, 51%)"/>
+          <path d="M18 8C12.48 8 8 12.48 8 18s4.48 10 10 10 10-4.48 10-10S23.52 8 18 8zm0 16c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z" fill="white" opacity="0.9"/>
+          <circle cx="18" cy="18" r="3" fill="white"/>
+        </svg>
+        <span class="nav-brand-name">Silensia</span>
+      </a>
+      <button class="sidenav-close" aria-label="Close menu" id="sidenav-close-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Sidenav Links -->
+    <nav class="sidenav-links" role="navigation" aria-label="Mobile navigation links">
+      <ul>
+        <li class="sidenav-dropdown">
+          <div class="sidenav-dropdown-toggle">Home</div>
+          <ul class="sidenav-dropdown-menu">
+            <li><a href="index.html" class="active">Home V1</a></li>
+            <li><a href="home-v2.html">Home V2</a></li>
+          </ul>
+        </li>
+        <li><a href="pages/about.html">About</a></li>
+        <li><a href="pages/journeys.html">Journeys</a></li>
+        <li><a href="pages/services.html">Services</a></li>
+        <li><a href="pages/contact.html">Contact</a></li>
+        <li class="sidenav-dropdown">
+          <div class="sidenav-dropdown-toggle">Dashboard</div>
+          <ul class="sidenav-dropdown-menu">
+            <li><a href="pages/user-dashboard.html">User Dashboard</a></li>
+            <li><a href="pages/admin-dashboard.html">Admin Dashboard</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="sidenav-divider"></div>
+
+    <!-- Sidenav Toggles -->
+    <div class="sidenav-toggles">
+      <button class="theme-toggle" id="sidenav-theme-toggle"></button>
+      <button class="rtl-toggle" id="sidenav-rtl-toggle"></button>
+    </div>
+
+    <div class="sidenav-divider"></div>
+
+    <!-- Sidenav CTA -->
+    <a href="pages/login.html" class="nav-cta sidenav-cta" id="sidenav-cta">Get Started</a>
+
+  </aside>
+
+  <!-- ================================================
+       MAIN CONTENT
+       ================================================ -->
+  <main class="page-content">
+    
+    <!-- 1. Hero Section -->
+    <section class="hero" aria-label="Hero Section">
+      <div class="hero-content">
+        <h1 class="hero-title">Transform Your Mind with <span>Silensia</span></h1>
+        <p class="hero-text">Experience guided hypnotherapy sessions, mindfulness coaching, and audio-based relaxation programs tailored for your mental wellbeing.</p>
+        <div class="hero-cta">
+          <a href="pages/login.html" class="btn-primary">Start Your Journey</a>
+          <a href="pages/about.html" class="btn-secondary">Learn More</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <!-- User will replace src later. Using an empty class specifically for theming. -->
+        <img src="images/Home V1/herosection-image.jpg" alt="Transformation through Silensia" id="home-hero-img">
+      </div>
+    </section>
+
+    <!-- 2. Quick Services Overview -->
+    <section class="services-overview">
+      <div class="section-header">
+        <span class="section-tag">Our Programs</span>
+        <h2 class="section-title">Discover Inner Peace</h2>
+        <p class="section-text">Explore our comprehensive range of services designed to help you overcome stress, sleep better, and unlock a more mindful life.</p>
+      </div>
+      <div class="services-grid">
+        <!-- Service 1 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3 class="service-title">Guided Hypnotherapy</h3>
+          <p class="service-desc">Deeply relaxing audio sessions crafted by licensed hypnotherapists to reprogram negative thought patterns.</p>
+          <a href="pages/services.html" class="service-link">View Details &rarr;</a>
+        </div>
+        <!-- Service 2 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+          </div>
+          <h3 class="service-title">Mindfulness Coaching</h3>
+          <p class="service-desc">One-on-one virtual sessions prioritizing emotional clarity and present-moment awareness.</p>
+          <a href="pages/services.html" class="service-link">View Details &rarr;</a>
+        </div>
+        <!-- Service 3 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
+          </div>
+          <h3 class="service-title">Audio Experiences</h3>
+          <p class="service-desc">Immersive soundscapes and binaural beats that facilitate deep sleep, focus, and immediate stress relief.</p>
+          <a href="pages/services.html" class="service-link">View Details &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Key Benefits -->
+    <section class="benefits">
+      <div class="benefits-visual">
+        <img src="images/Home V1/Why Silensia.jpg" alt="The Silensia Philosophy" id="home-benefits-img">
+      </div>
+      <div class="benefits-content">
+        <span class="section-tag">Why Silensia</span>
+        <h2 class="section-title">A Journey to the Center of the Self</h2>
+        <p class="section-text">By integrating clinical hypnotherapy techniques with modern mindfulness practices, we provide a holistic approach to mental wellbeing.</p>
+        
+        <div class="benefit-list">
+          <div class="benefit-item">
+            <div class="benefit-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div class="benefit-text-wrap">
+              <h4>Clinically Proven Techniques</h4>
+              <p>Our sessions use evidence-based psychological frameworks to ensure lasting change.</p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div class="benefit-text-wrap">
+              <h4>Accessible Anywhere</h4>
+              <p>Stream your therapeutic audio tracks securely from any mobile or desktop device.</p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div class="benefit-text-wrap">
+              <h4>Tailored Journeys</h4>
+              <p>Track your progress directly in the user dashboard and unlock specialized content.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW SECTION: NEURAL FREQUENCY LAB (Exclusive to Home V1) -->
+    <section class="neural-lab" aria-label="Neural Frequency Lab">
+      <div class="neural-lab-container">
+        <div class="neural-lab-grid">
+          <div class="lab-content">
+              <span class="section-tag neural-tag">Proprietary Technology</span>
+              <h2 class="section-title">The Neural Frequency Lab</h2>
+              <p>Our deep-focus audio is engineered using biological feedback. We don't just play sounds; we align frequencies with your brain's natural rhythms.</p>
+              
+              <div class="technology-stack">
+                  <div class="tech-item">
+                      <div class="tech-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></div>
+                      <div class="tech-info">
+                          <h5>Binaural Synthesis</h5>
+                          <p>Simulating safe neural environments for deep behavioral change.</p>
+                      </div>
+                  </div>
+                  <div class="tech-item">
+                      <div class="tech-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2v4"/><path d="M12 18v4"/><path d="M4.93 4.93l2.83 2.83"/><path d="M16.24 16.24l2.83 2.83"/><path d="M2 12h4"/><path d="M18 12h4"/><path d="M4.93 19.07l2.83-2.83"/><path d="M16.24 7.76l2.83-2.83"/></svg></div>
+                      <div class="tech-info">
+                          <h5>Alpha-Wave Entrainment</h5>
+                          <p>Precision calibration of audio to facilitate immediate relaxation.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="lab-visual">
+              <div class="freq-bar"></div>
+              <div class="freq-bar"></div>
+              <div class="freq-bar"></div>
+              <div class="freq-bar"></div>
+              <div class="freq-bar"></div>
+              <div class="freq-bar"></div>
+              <div class="freq-bar"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. How it Works -->
+    <section class="how-it-works">
+      <div class="section-header">
+        <span class="section-tag">The Process</span>
+        <h2 class="section-title">How Silensia Works</h2>
+        <p class="section-text">Begin your transformation in three simple steps.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3 class="step-title">Assessment</h3>
+          <p class="step-desc">Create your profile and let us know what mental or emotional roadblocks you are facing.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3 class="step-title">Personalized Plan</h3>
+          <p class="step-desc">We compile a specialized sequence of audio sessions and guided routines for you.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3 class="step-title">Engage & Transform</h3>
+          <p class="step-desc">Spend just 15 minutes a day listening, reflecting, and experiencing a calmer mind.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Testimonials -->
+    <section class="testimonials">
+      <div class="section-header">
+        <span class="section-tag">Testimonials</span>
+        <h2 class="section-title">Stories of Transformation</h2>
+      </div>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <p class="testimonial-quote">"Silensia has completely changed my nighttime routine. I've never slept so soundly, and my daily anxiety has virtually dissolved."</p>
+          <div class="testimonial-author">
+            <!-- Avatar Placeholder class -->
+            <img src="images/Home V1/Sarah Jenkins.jpg" alt="Sarah Jenkins" class="author-avatar">
+            <div class="author-info">
+              <h5>Sarah Jenkins</h5>
+              <p>Creative Director</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-quote">"The mindful coaching was a game-changer. The personalized approach made all the difference during a very stressful transition in my life."</p>
+          <div class="testimonial-author">
+            <img src="images/Home V1/Marcus Thorne.jpg" alt="Marcus Thorne" class="author-avatar">
+            <div class="author-info">
+              <h5>Marcus Thorne</h5>
+              <p>Entrepreneur</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-quote">"A truly immersive experience. The audio quality is unmatched and the gentle guidance always grounds me instantly."</p>
+          <div class="testimonial-author">
+            <img src="images/Home V1/Elena Rodriguez.jpg" alt="Elena Rodriguez" class="author-avatar">
+            <div class="author-info">
+              <h5>Elena Rodriguez</h5>
+              <p>Yoga Instructor</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Final CTA -->
+    <section class="final-cta">
+      <!-- Glow shapes -->
+      <div class="cta-glow glow-left"></div>
+      <div class="cta-glow glow-right"></div>
+      
+      <div class="cta-content">
+        <div class="cta-badge">
+           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+           <span>Silensia Premium | Mindfulness Platform</span>
+        </div>
+        <h2 class="cta-title">Start your free trial today</h2>
+        <p class="cta-text">Unlock the full potential of your mind with our comprehensive clinical hypnotherapy platform.</p>
+        <a href="pages/login.html" class="cta-btn">Create Free Account</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================================================
+       FOOTER
+       ================================================ -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      
+      <!-- Footer Top: Branding & Links -->
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-brand">
+            <svg class="nav-logo" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="36" height="36" rx="8" fill="hsl(245, 58%, 51%)"/>
+              <path d="M18 8C12.48 8 8 12.48 8 18s4.48 10 10 10 10-4.48 10-10S23.52 8 18 8zm0 16c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z" fill="white" opacity="0.9"/>
+              <circle cx="18" cy="18" r="3" fill="white"/>
+            </svg>
+            <span class="nav-brand-name">Silensia</span>
+          </a>
+          <p class="footer-tagline">Empowering your mental wellbeing through the science of sound and the art of mindfulness.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" aria-label="Twitter">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+            </a>
+            <a href="#" aria-label="YouTube">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.42a2.78 2.78 0 0 0-1.94 2C1 8.11 1 12 1 12s0 3.89.42 5.58a2.78 2.78 0 0 0 1.94 2c1.72.42 8.6.42 8.6.42s6.88 0 8.6-.42a2.78 2.78 0 0 0 1.94-2C23 15.89 23 12 23 12s0-3.89-.42-5.58z"/><polyline points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-nav">
+          <div class="footer-nav-col">
+            <h4 class="footer-title">Platform</h4>
+            <ul>
+              <li><a href="index.html">Home V1</a></li>
+              <li><a href="home-v2.html">Home V2</a></li>
+              <li><a href="pages/services.html">Services</a></li>
+              <li><a href="pages/journeys.html">Journeys</a></li>
+              <li><a href="pages/coming-soon.html">Coming Soon</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav-col">
+            <h4 class="footer-title">Explore</h4>
+            <ul>
+              <li><a href="pages/about.html">About</a></li>
+              <li><a href="pages/contact.html">Contact</a></li>
+              <li><a href="pages/admin-dashboard.html">Admin Dashboard</a></li>
+              <li><a href="pages/user-dashboard.html">User Dashboard</a></li>
+              <li><a href="pages/404.html">404 Error</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav-col newsletter-col">
+            <h4 class="footer-title">Stay Mindful</h4>
+            <p>Join our newsletter for weekly mindfulness tips and early access to new programs.</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Your email address" required>
+              <button type="submit" aria-label="Subscribe">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polyline points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Silensia Analytics. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Security</a>
+          <a href="#">Press</a>
+          <a href="#">Careers</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/global.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>

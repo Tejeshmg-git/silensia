@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Silensia Admin — Manage the neural network, users, and platform content." />
+  <title>Silensia — Admin Dashboard</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/admin-dashboard.css" />
+
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+</head>
+<body class="admin-shell">
+
+  <!-- ================================================
+       1. SIDEBAR NAVIGATION
+       ================================================ -->
+  <aside class="admin-sidebar" id="admin-sidebar" role="navigation" aria-label="Admin navigation">
+    <div class="sidebar-header">
+      <a href="../index.html" class="nav-brand">
+        <svg class="nav-logo" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="36" height="36" rx="8" fill="var(--color-primary)"/>
+          <path d="M18 8C12.48 8 8 12.48 8 18s4.48 10 10 10 10-4.48 10-10S23.52 8 18 8zm0 16c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z" fill="white" opacity="0.9"/>
+          <circle cx="18" cy="18" r="3" fill="white"/>
+        </svg>
+        <span class="nav-brand-name">Silensia<span class="badge-admin">Admin</span></span>
+      </a>
+      <button class="sidebar-close mobile-only-flex" aria-label="Close Sidebar" id="sidebar-close-btn">
+        <span></span><span></span>
+      </button>
+    </div>
+
+
+    <nav class="sidebar-nav">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="#" class="nav-link active" data-tab="overview">
+            <span class="nav-icon">📊</span>
+            <span class="nav-label">Overview</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link" data-tab="users">
+            <span class="nav-icon">👥</span>
+            <span class="nav-label">User Directory</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link" data-tab="lab">
+            <span class="nav-icon">🎧</span>
+            <span class="nav-label">Journey Lab</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link" data-tab="intelligence">
+            <span class="nav-icon">📈</span>
+            <span class="nav-label">Intelligence</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link" data-tab="transactions">
+            <span class="nav-icon">💳</span>
+            <span class="nav-label">Transactions</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="nav-spacer"></div>
+
+      <ul class="nav-list nav-secondary">
+        <li class="nav-item">
+          <div class="nav-link theme-sidebar-toggle">
+            <span class="nav-icon">🌗</span>
+            <span class="nav-label">Dark Mode</span>
+            <label class="switch"><input type="checkbox" id="sidebar-theme-checkbox"><span class="slider"></span></label>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link" data-tab="settings">
+
+            <span class="nav-icon">⚙️</span>
+            <span class="nav-label">Settings</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="../index.html" class="nav-link back-home">
+            <span class="nav-icon">🏠</span>
+            <span class="nav-label">Back to Home</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="login.html" class="nav-link logout-link">
+            <span class="nav-icon">🚪</span>
+            <span class="nav-label">Logout</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- ================================================
+       2. MAIN CONTENT AREA
+       ================================================ -->
+  <div class="admin-main">
+    
+    <!-- Header / Top Bar -->
+    <header class="admin-topbar">
+      <div class="topbar-left">
+        <button class="menu-toggle" aria-label="Toggle Sidebar" id="sidebar-toggle-btn">
+          <span></span><span></span><span></span>
+        </button>
+        <h1 class="page-title">Platform Overview</h1>
+      </div>
+      
+      <div class="topbar-right">
+        <div class="search-box">
+          <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" placeholder="Search neural IDs..." aria-label="Global Search">
+        </div>
+        <button class="theme-toggle" aria-label="Toggle theme" id="header-theme-toggle"></button>
+        <div class="admin-profile">
+          <div class="profile-info">
+            <span class="p-name">Dr. Aris Thorne</span>
+            <span class="p-role">Super Admin</span>
+          </div>
+          <div class="p-avatar">
+             <img src="../images/about/Dr. Aris Thorne.jpg" alt="Admin Avatar">
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Content Stage -->
+    <main class="admin-stage">
+      
+      <!-- TAB: OVERVIEW -->
+      <section id="tab-overview" class="admin-tab-content active">
+        <!-- KPI Row -->
+        <div class="kpi-grid">
+          <div class="kpi-card reveal">
+            <div class="kpi-icon icon-blue">🌐</div>
+            <div class="kpi-data">
+              <span class="kpi-label">Active Minds</span>
+              <h2 class="kpi-value">1,284</h2>
+              <span class="kpi-trend trend-up">↑ 12.5%</span>
+            </div>
+          </div>
+          <div class="kpi-card reveal">
+            <div class="kpi-icon icon-teal">💰</div>
+            <div class="kpi-data">
+              <span class="kpi-label">Monthly Revenue</span>
+              <h2 class="kpi-value">$42.8k</h2>
+              <span class="kpi-trend trend-up">↑ 8.2%</span>
+            </div>
+          </div>
+          <div class="kpi-card reveal">
+            <div class="kpi-icon icon-purple">🎧</div>
+            <div class="kpi-data">
+              <span class="kpi-label">Journey Completion</span>
+              <h2 class="kpi-value">94.5%</h2>
+              <span class="kpi-trend trend-stable">~ stable</span>
+            </div>
+          </div>
+          <div class="kpi-card reveal">
+            <div class="kpi-icon icon-gold">⭐</div>
+            <div class="kpi-data">
+              <span class="kpi-label">Avg. Rating</span>
+              <h2 class="kpi-value">4.92</h2>
+              <span class="kpi-trend trend-up">↑ 0.1</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="stage-bottom-grid">
+           <div class="content-card analytics-preview reveal">
+              <div class="card-header">
+                 <h3>Activity Insight</h3>
+                 <span class="card-badge">Last 30 Days</span>
+              </div>
+              <div class="chart-placeholder">
+                 <div class="activity-chart">
+                    <div class="chart-bar" style="height: 40%"></div>
+                    <div class="chart-bar" style="height: 60%"></div>
+                    <div class="chart-bar" style="height: 55%"></div>
+                    <div class="chart-bar" style="height: 80%"></div>
+                    <div class="chart-bar" style="height: 70%"></div>
+                    <div class="chart-bar" style="height: 90%"></div>
+                    <div class="chart-bar" style="height: 75%"></div>
+                 </div>
+              </div>
+           </div>
+           
+           <div class="content-card mini-table reveal">
+              <div class="card-header">
+                 <h3>Recent Synced IDs</h3>
+                 <a href="#" class="view-all">View All</a>
+              </div>
+              <div class="table-wrapper">
+                 <table class="data-table">
+                    <thead>
+                       <tr>
+                          <th>User ID</th>
+                          <th>Program</th>
+                          <th>Status</th>
+                       </tr>
+                    </thead>
+                    <tbody>
+                       <tr>
+                          <td data-label="User ID">#NEURAL-882</td>
+                          <td data-label="Program">Deep Rest</td>
+                          <td data-label="Status"><span class="badge success">Active</span></td>
+                       </tr>
+                       <tr>
+                          <td data-label="User ID">#NEURAL-721</td>
+                          <td data-label="Program">Alpha Focus</td>
+                          <td data-label="Status"><span class="badge success">Active</span></td>
+                       </tr>
+                       <tr>
+                          <td data-label="User ID">#NEURAL-419</td>
+                          <td data-label="Program">Somatic Calm</td>
+                          <td data-label="Status"><span class="badge warning">Paused</span></td>
+                       </tr>
+                    </tbody>
+
+                 </table>
+              </div>
+           </div>
+        </div>
+      </section>
+
+      <!-- TAB: USER DIRECTORY -->
+      <section id="tab-users" class="admin-tab-content">
+        <div class="content-card full-width">
+          <div class="card-header">
+            <h3>Neural Member Directory</h3>
+            <div class="card-actions">
+              <button class="btn-filled btn-sm">+ Add Member</button>
+            </div>
+          </div>
+          <div class="table-wrapper">
+             <table class="data-table">
+                <thead>
+                   <tr>
+                      <th>Name</th>
+                      <th>Neural Tier</th>
+                      <th>Last Sync</th>
+                      <th>Actions</th>
+                   </tr>
+                </thead>
+                <tbody>
+                   <tr>
+                      <td data-label=" Name\>Aris Thorne</td>
+                      <td><span class="badge success">Guided Mastery</span></td>
+                      <td>Today, 09:12</td>
+                      <td><button class="btn-text">Edit</button></td>
+                   </tr>
+                   <tr>
+                      <td data-label=\Name\>Elena Rodriguez</td>
+                      <td><span class="badge success">Guided Mastery</span></td>
+                      <td>2 days ago</td>
+                      <td><button class="btn-text">Edit</button></td>
+                   </tr>
+                   <tr>
+                      <td data-label=\Name\>Marcus Vance</td>
+                      <td><span class="badge warning">Standard Tier</span></td>
+                      <td>5 days ago</td>
+                      <td><button class="btn-text">Edit</button></td>
+                   </tr>
+                </tbody>
+             </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB: JOURNEY LAB -->
+      <section id="tab-lab" class="admin-tab-content">
+        <div class="content-card">
+          <div class="card-header">
+            <h3>Neural Sequence Library</h3>
+            <button class="btn-filled btn-sm">+ Upload Sequence</button>
+          </div>
+          <div class="table-wrapper">
+             <table class="data-table">
+                <thead>
+                   <tr>
+                      <th>Track Name</th>
+                      <th>Primary Frequency</th>
+                      <th>Clinical Goal</th>
+                      <th>Status</th>
+                   </tr>
+                </thead>
+                <tbody>
+                   <tr>
+                      <td>The Midnight Forest</td>
+                      <td>4.5Hz (Theta)</td>
+                      <td>Deep Sleep</td>
+                      <td><span class="badge success">Live</span></td>
+                   </tr>
+                   <tr>
+                      <td>Arctic Clarity</td>
+                      <td>12Hz (Alpha)</td>
+                      <td>Cognitive Focus</td>
+                      <td><span class="badge success">Live</span></td>
+                   </tr>
+                   <tr>
+                      <td>Somatic Grounding</td>
+                      <td>528Hz</td>
+                      <td>Anxiety Diffusion</td>
+                      <td><span class="badge warning">Draft</span></td>
+                   </tr>
+                </tbody>
+             </table>
+          </div>
+        </div>
+        
+        <div class="stage-bottom-grid" style="margin-top: var(--space-xl);">
+           <div class="content-card">
+              <div class="card-header"><h3>Active Programs</h3></div>
+              <ul class="program-list">
+                 <li class="program-item">
+                    <span>7 Days of Alpha Focus</span>
+                    <button class="btn-text">Manage</button>
+                 </li>
+                 <li class="program-item">
+                    <span>Chronic Stress Diffusion</span>
+                    <button class="btn-text">Manage</button>
+                 </li>
+              </ul>
+           </div>
+           <div class="content-card">
+              <div class="card-header"><h3>Storage Insight</h3></div>
+              <div class="storage-stats">
+                 <p>Neural Audio Cache: <strong>1.4 GB / 5 GB</strong></p>
+                 <div class="progress-bar"><div class="progress" style="width: 28%"></div></div>
+              </div>
+           </div>
+        </div>
+      </section>
+
+      <!-- TAB: INTELLIGENCE -->
+      <section id="tab-intelligence" class="admin-tab-content">
+        <div class="kpi-grid">
+           <div class="kpi-card">
+              <div class="kpi-icon icon-blue">⏰</div>
+              <div class="kpi-data">
+                 <span class="kpi-label">Peak Awareness Hours</span>
+                 <h2 class="kpi-value">11:00 AM</h2>
+              </div>
+           </div>
+           <div class="kpi-card">
+              <div class="kpi-icon icon-teal">🧬</div>
+              <div class="kpi-data">
+                 <span class="kpi-label">Top Frequency Range</span>
+                 <h2 class="kpi-value">Alpha (8-13Hz)</h2>
+              </div>
+           </div>
+           <div class="kpi-card">
+              <div class="kpi-icon icon-purple">🔄</div>
+              <div class="kpi-data">
+                 <span class="kpi-label">User Retention</span>
+                 <h2 class="kpi-value">82%</h2>
+              </div>
+           </div>
+        </div>
+        
+        <div class="stage-bottom-grid" style="margin-top: var(--space-xl);">
+           <div class="content-card">
+             <div class="card-header">
+                <h3>Top Session Intent</h3>
+             </div>
+             <ul class="program-list">
+                <li class="program-item">
+                   <span>Deep Acoustic Rest</span>
+                   <span class="badge success">42%</span>
+                </li>
+                <li class="program-item">
+                   <span>Mental Clarity / Focus</span>
+                   <span class="badge success">31%</span>
+                </li>
+                <li class="program-item">
+                   <span>Anxiety Diffusion</span>
+                   <span class="badge success">27%</span>
+                </li>
+             </ul>
+           </div>
+           
+           <div class="content-card">
+             <div class="card-header">
+                <h3>Regional Engagement</h3>
+             </div>
+             <ul class="settings-list">
+                <li class="setting-item">
+                   <span>North America</span>
+                   <span class="kpi-trend trend-up">↑ 14%</span>
+                </li>
+                <li class="setting-item">
+                   <span>European Union</span>
+                   <span class="kpi-trend trend-up">↑ 8%</span>
+                </li>
+                <li class="setting-item">
+                   <span>Asia Pacific</span>
+                   <span class="kpi-trend trend-stable">0%</span>
+                </li>
+             </ul>
+           </div>
+        </div>
+
+      </section>
+
+      <!-- TAB: TRANSACTIONS -->
+      <section id="tab-transactions" class="admin-tab-content">
+        <div class="content-card full-width">
+          <div class="card-header">
+            <h3>Recent Revenue Streams</h3>
+            <span class="card-badge">Current Month</span>
+          </div>
+          <div class="table-wrapper">
+             <table class="data-table">
+                <thead>
+                   <tr>
+                      <th>Transaction ID</th>
+                      <th>Member</th>
+                      <th>Tier</th>
+                      <th>Amount</th>
+                      <th>Status</th>
+                   </tr>
+                </thead>
+                <tbody>
+                   <tr>
+                      <td>#TXN-9021</td>
+                      <td data-label=" Name\>Aris Thorne</td>
+                      <td>Guided Mastery</td>
+                      <td><strong>$499.00</strong></td>
+                      <td><span class="badge success">Settled</span></td>
+                   </tr>
+                   <tr>
+                      <td>#TXN-9018</td>
+                      <td data-label=\Name\>Elena Rodriguez</td>
+                      <td>Guided Mastery</td>
+                      <td><strong>$499.00</strong></td>
+                      <td><span class="badge success">Settled</span></td>
+                   </tr>
+                   <tr>
+                      <td>#TXN-8992</td>
+                      <td data-label=\Name\>Marcus Vance</td>
+                      <td>Standard Tier</td>
+                      <td><strong>$24.99</strong></td>
+                      <td><span class="badge success">Settled</span></td>
+                   </tr>
+                </tbody>
+             </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB: SETTINGS -->
+      <section id="tab-settings" class="admin-tab-content">
+         <div class="settings-grid">
+            <div class="content-card">
+               <div class="card-header"><h3>Platform Toggles</h3></div>
+               <ul class="settings-list">
+                  <li class="setting-item">
+                     <span>Public Signups</span>
+                     <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+                  </li>
+                  <li class="setting-item">
+                     <span>Clinical API Sync</span>
+                     <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+                  </li>
+                  <li class="setting-item">
+                     <span>Maintenance Mode</span>
+                     <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+                  </li>
+               </ul>
+            </div>
+            
+            <div class="content-card">
+               <div class="card-header"><h3>Admin Profile</h3></div>
+               <div class="admin-profile-edit">
+                  <p>Current Admin: <strong>Dr. Aris Thorne</strong></p>
+                  <p>Role: <strong>Superuser</strong></p>
+                  <button class="btn-outline btn-sm" style="margin-top: var(--space-md);">Reset Password</button>
+               </div>
+            </div>
+         </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="../js/global.js"></script>
+  <script src="../js/admin-dashboard.js"></script>
+</body>
+</html>

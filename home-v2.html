@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Silensia Home V2 — A premium, immersive experience. Explore the science of silence and find your frequency." />
+  <title>Silensia — Premium Immersive Experience (V2)</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/home-v2.css" />
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+</head>
+<body>
+
+  <!-- ================================================
+       HEADER
+       ================================================ -->
+  <header class="site-header" id="site-header">
+    <a href="index.html" class="nav-brand">
+      <svg class="nav-logo" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="36" height="36" rx="8" fill="var(--color-primary)"/>
+        <path d="M18 8C12.48 8 8 12.48 8 18s4.48 10 10 10 10-4.48 10-10S23.52 8 18 8zm0 16c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z" fill="white" opacity="0.9"/>
+        <circle cx="18" cy="18" r="3" fill="white"/>
+      </svg>
+      <span class="nav-brand-name">Silensia</span>
+    </a>
+
+    <nav class="nav-links" role="navigation">
+      <ul>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle active">Home</a>
+          <ul class="dropdown-menu">
+            <li><a href="index.html">Home V1</a></li>
+            <li><a href="home-v2.html">Home V2</a></li>
+          </ul>
+        </li>
+        <li><a href="pages/about.html">About</a></li>
+        <li><a href="pages/journeys.html">Journeys</a></li>
+        <li><a href="pages/services.html">Services</a></li>
+        <li><a href="pages/contact.html">Contact</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Dashboard</a>
+          <ul class="dropdown-menu">
+            <li><a href="pages/user-dashboard.html">User Dashboard</a></li>
+            <li><a href="pages/admin-dashboard.html">Admin Dashboard</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="theme-toggle" aria-label="Toggle theme" id="header-theme-toggle"></button>
+      <button class="rtl-toggle" aria-label="Toggle RTL" id="header-rtl-toggle"></button>
+      <a href="pages/login.html" class="nav-cta">Explore Now</a>
+    </div>
+
+    <button class="hamburger" id="hamburger-btn">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <div class="sidenav-overlay" id="sidenav-overlay"></div>
+  <aside class="sidenav" id="sidenav">
+    <div class="sidenav-header">
+      <div class="nav-brand">
+        <span class="nav-brand-name">Silensia</span>
+      </div>
+      <button class="sidenav-close" id="sidenav-close-btn">&times;</button>
+    </div>
+    <nav class="sidenav-links">
+      <ul>
+        <li><a href="index.html">Home V1</a></li>
+        <li><a href="home-v2.html" class="active">Home V2</a></li>
+        <li><a href="pages/about.html">About</a></li>
+        <li><a href="pages/journeys.html">Journeys</a></li>
+        <li><a href="pages/services.html">Services</a></li>
+        <li><a href="pages/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- ================================================
+       MAIN CONTENT
+       ================================================ -->
+  <main class="page-content">
+
+    <!-- HERO SECTION (Bold & Immersive) -->
+    <section class="v2-hero">
+      <div class="hero-overlay"></div>
+      <div class="v2-hero-content">
+        <span class="hero-pretitle reveal">Welcome to the Evolution of Mind</span>
+        <h1 class="hero-title reveal">Where Silence Meets <span>Transformation</span></h1>
+        <p class="hero-desc reveal">A premium sanctuary for focused growth, clinical hypnotherapy, and the art of modern mindfulness.</p>
+        <div class="hero-btns reveal">
+          <a href="pages/journeys.html" class="btn-primary">Find Your Frequency</a>
+          <a href="pages/about.html" class="btn-glass">Our Story</a>
+        </div>
+      </div>
+      <!-- Background Visual Placeholder -->
+      <div class="hero-bg-visual">
+         <div class="abstract-shape shape-1"></div>
+         <div class="abstract-shape shape-2"></div>
+      </div>
+    </section>
+
+    <!-- SECTION 1: IMPACT METRICS -->
+    <section class="section-stats">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-value" data-target="15000">0</span><span class="stat-suffix">+</span>
+            <p class="stat-label">Hours of Guidance</p>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value" data-target="50">0</span><span class="stat-suffix">k</span>
+            <p class="stat-label">Mindful Members</p>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value" data-target="98">0</span><span class="stat-suffix">%</span>
+            <p class="stat-label">Success Rate</p>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value" data-target="120">0</span><span class="stat-suffix">+</span>
+            <p class="stat-label">Journeys Created</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: PATH FINDER (Interactive Selection) -->
+    <section id="path-finder" class="section-pathfinder">
+      <div class="container">
+        <div class="section-header-v2">
+          <h2 class="section-title-v2">Choose Your Frequency</h2>
+          <p class="section-subtitle-v2">We don't believe in one-size-fits-all. Select a path that resonates with your current state.</p>
+        </div>
+        <div class="path-grid">
+          <div class="path-card" style="--card-index: 1;">
+            <div class="path-icon">💤</div>
+            <h3>Deep Rest</h3>
+            <p>Overcome insomnia and erratic sleep patterns with Theta-wave audio journeys.</p>
+            <a href="#" class="path-link">Explore Program &rarr;</a>
+          </div>
+          <div class="path-card active" style="--card-index: 2;">
+            <div class="path-icon">🔥</div>
+            <h3>Hyper Focus</h3>
+            <p>Master your attention and eliminate mental clutter for peak productivity.</p>
+            <a href="#" class="path-link">Explore Program &rarr;</a>
+          </div>
+          <div class="path-card" style="--card-index: 3;">
+            <div class="path-icon">🌿</div>
+            <h3>Anxiety Relief</h3>
+            <p>Gently rewire your nervous system to respond with calm in high-pressure moments.</p>
+            <a href="#" class="path-link">Explore Program &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: NEUROSCIENCE (Scientific Proof) -->
+    <section class="section-science">
+      <div class="container science-wrap">
+        <div class="science-visual">
+          <div class="science-img">
+            <img src="images/Home v2/Neuroscience.jpg" alt="Neural Science Diagram" style="width: 100%; height: auto; object-fit: contain;">
+          </div>
+        </div>
+        <div class="science-content">
+          <span class="tag">The Method</span>
+          <h2 class="section-title-v2">The Neuroscience of Change</h2>
+          <p>Our methodology is rooted in the Alpha-Theta brainwave bridges. By slowing down neural firing, we access the subconscious mind where core habits and emotional triggers reside.</p>
+          <ul class="science-list">
+             <li><strong>Binaural Entrainment:</strong> Syncing brainwaves to therapeutic frequencies.</li>
+             <li><strong>Linguistic Reframing:</strong> Rewriting the narrative of your self-talk.</li>
+             <li><strong>Somatic Integration:</strong> Connecting mental clarity to physical ease.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: AUDIO PREVIEW (Immersive Sound UI) -->
+    <section class="section-audio">
+      <div class="audio-container">
+        <div class="audio-cta">
+           <h2 class="section-title-v2">Experience the Clarity</h2>
+           <p>Don't just take our word for it. Close your eyes and experience a segment of our premium audio engine.</p>
+           <button class="btn-primary">Unlock Full Journey</button>
+        </div>
+        <div class="audio-player-ui">
+          <div class="player-header">
+            <span class="live-tag">Preview Mode</span>
+            <h3>"The Midnight Forest"</h3>
+            <p>Guided Sleep Journey • 15 Minutes</p>
+          </div>
+          <div class="player-visualization">
+            <div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div>
+          </div>
+          <div class="player-controls">
+            <button class="p-btn">&laquo;</button>
+            <button class="p-btn play-btn">▶</button>
+            <button class="p-btn">&raquo;</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: EXPERT COUNCIL -->
+    <section class="section-experts">
+      <div class="container">
+        <div class="section-header-v2">
+          <h2 class="section-title-v2">The Expert Council</h2>
+          <p class="section-subtitle-v2">Journeys crafted by world-class clinicians and mindfulness masters.</p>
+        </div>
+        <div class="experts-grid">
+          <div class="expert-profile">
+            <div class="expert-img-container">
+               <img src="images/Home V1/Marcus Thorne.jpg" alt="Dr. Aris Thorne" class="expert-img">
+            </div>
+            <h4>Dr. Aris Thorne</h4>
+            <span>Lead Clinical Hypnotherapist</span>
+          </div>
+          <div class="expert-profile">
+            <div class="expert-img-container">
+               <img src="images/Home V1/Sarah Jenkins.jpg" alt="Sarah El-Amin" class="expert-img">
+            </div>
+            <h4>Sarah El-Amin</h4>
+            <span>Mindfulness Director</span>
+          </div>
+          <div class="expert-profile">
+            <div class="expert-img-container">
+               <img src="images/Home V1/Elena Rodriguez.jpg" alt="Marcus Vance" class="expert-img">
+            </div>
+            <h4>Marcus Vance</h4>
+            <span>Somatic Breathwork Coach</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: KNOWLEDGE BASE (FAQ Accordion) -->
+    <section class="section-faq">
+      <div class="container faq-container">
+        <div class="section-header-v2">
+          <h2 class="section-title-v2">Curiosity & Clarity</h2>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question">What is Hypnotherapy exactly? <span>+</span></button>
+            <div class="faq-answer">
+              <p>It is a state of focused attention where the mind is highly responsive to positive suggestion. It is not "mind control"; you are always in charge.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How often should I listen to a journey? <span>+</span></button>
+            <div class="faq-answer">
+              <p>Consistency is key. We recommend one 15-20 minute session daily for at least 21 days to see neuroplastic changes.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Is it safe for everyone? <span>+</span></button>
+            <div class="faq-answer">
+              <p>While safe for most, we recommend consulting a physician if you have a history of severe mental health conditions like epilepsy or schizophrenia.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================================================
+       FOOTER
+       ================================================ -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-brand">
+            <svg class="nav-logo" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="36" height="36" rx="8" fill="var(--color-primary)"/>
+              <path d="M18 8C12.48 8 8 12.48 8 18s4.48 10 10 10 10-4.48 10-10S23.52 8 18 8zm0 16c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z" fill="white" opacity="0.9"/>
+              <circle cx="18" cy="18" r="3" fill="white"/>
+            </svg>
+            <span class="nav-brand-name">Silensia</span>
+          </a>
+          <p class="footer-tagline">Empowering your mental wellbeing through the science of sound and the art of mindfulness.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" aria-label="Twitter">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+            </a>
+            <a href="#" aria-label="YouTube">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.42a2.78 2.78 0 0 0-1.94 2C1 8.11 1 12 1 12s0 3.89.42 5.58a2.78 2.78 0 0 0 1.94 2c1.72.42 8.6.42 8.6.42s6.88 0 8.6-.42a2.78 2.78 0 0 0 1.94-2C23 15.89 23 12 23 12s0-3.89-.42-5.58z"/><polyline points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-nav">
+          <div class="footer-nav-col">
+            <h4 class="footer-title">Platform</h4>
+            <ul>
+              <li><a href="index.html">Home V1</a></li>
+              <li><a href="home-v2.html">Home V2</a></li>
+              <li><a href="pages/services.html">Services</a></li>
+              <li><a href="pages/journeys.html">Journeys</a></li>
+              <li><a href="pages/coming-soon.html">Coming Soon</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav-col">
+            <h4 class="footer-title">Explore</h4>
+            <ul>
+              <li><a href="pages/about.html">About</a></li>
+              <li><a href="pages/contact.html">Contact</a></li>
+              <li><a href="pages/admin-dashboard.html">Admin Dashboard</a></li>
+              <li><a href="pages/user-dashboard.html">User Dashboard</a></li>
+              <li><a href="pages/404.html">404 Error</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav-col newsletter-col">
+            <h4 class="footer-title">Stay Mindful</h4>
+            <p>Join our newsletter for weekly mindfulness tips and early access to new programs.</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Your email address" required>
+              <button type="submit" aria-label="Subscribe">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polyline points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Silensia Analytics. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Security</a>
+          <a href="#">Press</a>
+          <a href="#">Careers</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/global.js"></script>
+  <script src="js/home-v2.js"></script>
+</body>
+</html>

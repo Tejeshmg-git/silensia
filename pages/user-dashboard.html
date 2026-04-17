@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Silensia Sanctuary — Your personal portal for neural recovery and growth." />
+  <title>Silensia — User Dashboard</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/user-dashboard.css" />
+
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+</head>
+<body class="dashboard-shell user-sanctuary">
+
+  <!-- ================================================
+       1. SIDEBAR NAVIGATION
+       ================================================ -->
+  <aside class="dashboard-sidebar" id="dashboard-sidebar" role="navigation" aria-label="User navigation">
+    <div class="sidebar-header">
+      <a href="../index.html" class="nav-brand">
+        <svg class="nav-logo" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="36" height="36" rx="8" fill="var(--color-primary)"/>
+          <circle cx="18" cy="18" r="8" stroke="white" stroke-width="2"/>
+          <circle cx="18" cy="18" r="3" fill="white"/>
+        </svg>
+        <span class="nav-brand-name">Silensia</span>
+      </a>
+      <button class="sidebar-close mobile-only-flex" aria-label="Close Sidebar" id="sidebar-close-btn">
+        <span></span><span></span>
+      </button>
+    </div>
+
+
+    <nav class="sidebar-nav">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="#" class="nav-link active" data-tab="sanctuary">
+            <span class="nav-icon">✨</span>
+            <span class="nav-label">Sanctuary</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link" data-tab="library">
+            <span class="nav-icon">🎧</span>
+            <span class="nav-label">Neural Library</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link" data-tab="insights">
+            <span class="nav-icon">🧘</span>
+            <span class="nav-label">Growth Insights</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link" data-tab="coaching">
+            <span class="nav-icon">💎</span>
+            <span class="nav-label">Guided Mastery</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="nav-spacer"></div>
+
+      <ul class="nav-list nav-secondary">
+        <li class="nav-item mobile-only-item">
+          <div class="nav-link theme-sidebar-toggle">
+            <span class="nav-icon">🌗</span>
+            <span class="nav-label">Dark Mode</span>
+            <label class="switch"><input type="checkbox" id="sidebar-theme-checkbox"><span class="slider"></span></label>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link" data-tab="settings">
+
+            <span class="nav-icon">⚙️</span>
+            <span class="nav-label">Settings</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="../index.html" class="nav-link back-home">
+            <span class="nav-icon">🏠</span>
+            <span class="nav-label">Back to Home</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="login.html" class="nav-link logout-link">
+            <span class="nav-icon">🚪</span>
+            <span class="nav-label">Logout</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- ================================================
+       2. MAIN CONTENT AREA
+       ================================================ -->
+  <div class="dashboard-main">
+    
+    <!-- Top Bar -->
+    <header class="dashboard-topbar">
+      <div class="topbar-left">
+        <button class="menu-toggle" aria-label="Toggle Sidebar" id="sidebar-toggle-btn">
+          <span></span><span></span><span></span>
+        </button>
+        <h1 class="page-title">Personal Sanctuary</h1>
+      </div>
+      
+      <div class="topbar-right">
+        <div class="search-box">
+          <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" placeholder="Find your frequency..." aria-label="Library Search">
+        </div>
+        <button class="theme-toggle" aria-label="Toggle theme" id="header-theme-toggle"></button>
+        <div class="user-profile">
+          <div class="p-avatar">
+             <img src="../images/about/Dr. Aris Thorne.jpg" alt="User Avatar">
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Content Stage -->
+    <main class="dashboard-stage">
+      
+      <!-- TAB: SANCTUARY (OVERVIEW) -->
+      <section id="tab-sanctuary" class="dashboard-tab-content active">
+        <div class="sanctuary-hero reveal">
+          <div class="hero-text">
+            <span class="greeting-tag">Baseline Sync Required</span>
+            <h2 class="welcome-text">Good Morning, <span class="text-gradient">Aris</span></h2>
+            <p class="hero-desc">Your neural recovery is at 84%. Ready for a morning focus sequence?</p>
+            <div class="hero-actions">
+               <button class="btn-filled">Resume Last Journey</button>
+               <span class="streak-badge">🔥 12 Day Streak</span>
+            </div>
+          </div>
+          <div class="hero-visual">
+             <div class="pulse-ring"></div>
+             <div class="pulse-ring delay-1"></div>
+          </div>
+        </div>
+
+        <div class="grid-layout-v2">
+           <div class="content-card reveal">
+              <div class="card-header">
+                 <h3>Recent Journeys</h3>
+              </div>
+              <ul class="journey-list">
+                 <li class="journey-item">
+                    <div class="j-info">
+                       <strong>Deep Acoustic Rest</strong>
+                       <span>Completed 5h ago</span>
+                    </div>
+                    <span class="j-time">22m</span>
+                 </li>
+                 <li class="journey-item">
+                    <div class="j-info">
+                       <strong>Chronic Stress Diffusion</strong>
+                       <span>Completed yesterday</span>
+                    </div>
+                    <span class="j-time">45m</span>
+                 </li>
+              </ul>
+           </div>
+
+           <div class="content-card reveal">
+              <div class="card-header">
+                 <h3>Daily Metric</h3>
+              </div>
+              <div class="metric-circle-container">
+                 <div class="metric-circle">
+                    <span class="metric-val">84%</span>
+                    <span class="metric-label">Neural Clarity</span>
+                 </div>
+              </div>
+           </div>
+        </div>
+      </section>
+
+      <!-- TAB: LIBRARY -->
+      <section id="tab-library" class="dashboard-tab-content">
+        <div class="library-main-grid">
+           <!-- Discovery Queue -->
+           <div class="vault-section">
+              <div class="section-header-v2">
+                 <h3>Discovery Queue</h3>
+                 <span class="card-badge">Pinned for Clarity</span>
+              </div>
+              
+              <div class="tracks-grid">
+                 <div class="t-card">
+                    <div class="t-icon">🏔️</div>
+                    <div class="t-info">
+                       <strong>Arctic Stillness</strong>
+                       <span>Binaural Beats • 30m</span>
+                    </div>
+                    <button class="t-play">▶</button>
+                 </div>
+                 <div class="t-card">
+                    <div class="t-icon">🌌</div>
+                    <div class="t-info">
+                       <strong>Stellar Convergence</strong>
+                       <span>Deep Theta • 60m</span>
+                    </div>
+                    <button class="t-play">▶</button>
+                 </div>
+              </div>
+           </div>
+
+           <!-- Neural Milestones -->
+           <div class="recent-sidebar">
+              <div class="section-header-v2">
+                 <h3>Neural Milestones</h3>
+              </div>
+              <ul class="milestone-list">
+                 <li class="milestone-item">
+                    <div class="m-check">✓</div>
+                    <div class="m-text">First 100m Synchronized</div>
+                 </li>
+                 <li class="milestone-item">
+                    <div class="m-check">✓</div>
+                    <div class="m-text">Alpha-State Mastery</div>
+                 </li>
+                 <li class="milestone-item locked">
+                    <div class="m-check">?</div>
+                    <div class="m-text">Obsidian Depth (Locked)</div>
+                 </li>
+              </ul>
+           </div>
+        </div>
+      </section>
+      
+      <!-- TAB: INSIGHTS -->
+      <section id="tab-insights" class="dashboard-tab-content">
+        <div class="insights-grid">
+           <!-- Card 2: Mood Delta -->
+           <div class="content-card reveal">
+              <div class="card-header">
+                 <div class="h-group">
+                    <h3>Mood Delta</h3>
+                    <p class="c-subtitle">Continuous Clinical Sync</p>
+                 </div>
+              </div>
+              <div class="mood-chart-wrapper">
+                 <div class="y-axis">
+                    <span>Alpha</span>
+                    <span>Zen</span>
+                    <span>Base</span>
+                 </div>
+                 <div class="mood-chart-placeholder">
+                    <svg viewBox="0 0 400 150" class="mood-line">
+                       <defs>
+                          <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
+                             <stop offset="0%" stop-color="var(--color-accent)" stop-opacity="0.2" />
+                             <stop offset="100%" stop-color="var(--color-accent)" stop-opacity="0" />
+                          </linearGradient>
+                       </defs>
+                       <path d="M0,130 Q100,20 200,80 T400,30 L400,150 L0,150 Z" fill="url(#areaGrad)"></path>
+                       <path d="M0,130 Q100,20 200,80 T400,30" fill="none" stroke="var(--color-accent)" stroke-width="4" stroke-linecap="round" class="animated-path"></path>
+                       <circle cx="400" cy="30" r="6" fill="var(--color-accent)"></circle>
+                    </svg>
+                 </div>
+              </div>
+           </div>
+
+           <!-- Card 3: Neural Distribution (New) -->
+           <div class="content-card reveal">
+              <div class="card-header">
+                 <div class="h-group">
+                    <h3>Neural Intent</h3>
+                    <p class="c-subtitle">Focus vs Recovery</p>
+                 </div>
+              </div>
+              <div class="distribution-list">
+                 <div class="dist-item">
+                    <div class="dist-label"><span>Deep Sleep</span> <span>60%</span></div>
+                    <div class="progress-bar"><div class="progress" style="width: 60%; background: #3b82f6;"></div></div>
+                 </div>
+                 <div class="dist-item">
+                    <div class="dist-label"><span>Focus</span> <span>25%</span></div>
+                    <div class="progress-bar"><div class="progress" style="width: 25%; background: var(--color-accent);"></div></div>
+                 </div>
+                 <div class="dist-item">
+                    <div class="dist-label"><span>Anxiety Relief</span> <span>15%</span></div>
+                    <div class="progress-bar"><div class="progress" style="width: 15%; background: #6b7280;"></div></div>
+                 </div>
+              </div>
+           </div>
+        </div>
+      </section>
+
+      <!-- TAB: COACHING -->
+      <section id="tab-coaching" class="dashboard-tab-content">
+        <div class="coaching-main reveal">
+           <!-- Coach Focus -->
+           <div class="content-card coach-profile-card">
+              <div class="card-header"><h3>Assigned Practitioner</h3></div>
+              <div class="coach-flex">
+                 <div class="avatar-box">
+                    <img src="../images/about/Dr. Aris Thorne.jpg" alt="Dr. Aris Thorne">
+                    <span class="online-indicator"></span>
+                 </div>
+                 <div class="coach-details">
+                    <h4>Dr. Aris Thorne</h4>
+                    <p>Neuro-Mindfulness Specialist</p>
+                    <div class="coach-actions">
+                       <button class="btn-filled btn-sm">Message</button>
+                       <button class="btn-outline btn-sm">View Notes</button>
+                    </div>
+                 </div>
+              </div>
+           </div>
+
+           <!-- Scheduled Session -->
+           <div class="content-card session-status-card">
+              <div class="card-header">
+                 <h3>Next Sync Session</h3>
+                 <span class="tag-status">Confirmed</span>
+              </div>
+              <div class="session-info-v2">
+                 <div class="s-clock">🕒 11:00 AM</div>
+                 <div class="s-date-v2">Friday, Oct 24, 2026</div>
+                 <p class="s-note">Focus: Neural Baseline Calibration</p>
+              </div>
+              <button class="btn-filled w-full">Manage Appointment</button>
+           </div>
+        </div>
+
+        <div class="global-practice reveal" style="margin-top: var(--space-2xl);">
+           <div class="content-card">
+              <div class="card-header"><h3>Global Integration (Live)</h3></div>
+              <p class="c-subtitle">Join 2,400+ members in synchronized resonance.</p>
+              <div class="live-event-card">
+                 <div class="event-meta">
+                    <strong>Arctic Resonance Circle</strong>
+                    <span>Live in 14:02</span>
+                 </div>
+                 <button class="btn-filled btn-sm">Remind Me</button>
+              </div>
+           </div>
+        </div>
+      </section>
+
+      <!-- TAB: SETTINGS -->
+      <section id="tab-settings" class="dashboard-tab-content">
+        <div class="settings-layout grid-layout-v2">
+           <div class="content-card reveal">
+              <div class="card-header"><h3>General Profile</h3></div>
+              <form class="user-form">
+                 <div class="f-group">
+                    <label>Display Name</label>
+                    <input type="text" value="Aris Thorne">
+                 </div>
+                 <div class="f-group">
+                    <label>Email Address</label>
+                    <input type="email" value="aris@silensia.io">
+                 </div>
+                 <div class="f-group">
+                    <label>Phone Recovery</label>
+                    <input type="tel" value="+1 (555) 902-3341">
+                 </div>
+                 <div class="f-group">
+                    <label>Regional Timezone</label>
+                    <select class="f-input-select">
+                       <option>Arctic Standard (GMT-7)</option>
+                       <option>Obsidian Standard (GMT+2)</option>
+                       <option selected>UTC / Clinical Standard</option>
+                    </select>
+                 </div>
+                 <button class="btn-filled" type="button">Update Identity</button>
+              </form>
+           </div>
+           
+           <div class="content-card reveal">
+              <div class="card-header"><h3>Subscription</h3></div>
+              <div class="sub-header-row">
+                 <div class="sub-badge active">Guided Mastery</div>
+                 <span class="sub-price">$149<small>/mo</small></span>
+              </div>
+              
+              <div class="sub-details">
+                 <ul class="benefit-list">
+                    <li>✓ Unlimited Neural Library</li>
+                    <li>✓ Weekly Bio-Sync Coaching</li>
+                    <li>✓ Professional Obsidian Lab</li>
+                    <li>✓ Priority Data Restoration</li>
+                 </ul>
+                 
+                 <div class="payment-info">
+                    <strong>Payment Method</strong>
+                    <span>VISA ending in 4421</span>
+                 </div>
+                 
+                 <p class="sub-desc">Next renewal: Nov 15, 2026</p>
+              </div>
+              
+              <div class="sub-actions">
+                 <button class="btn-filled btn-sm">Manage Billing</button>
+                 <button class="btn-outline btn-sm">Switch Plan</button>
+              </div>
+           </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="../js/global.js"></script>
+  <script src="../js/user-dashboard.js"></script>
+</body>
+</html>
