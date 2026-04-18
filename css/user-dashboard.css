@@ -82,9 +82,13 @@
   flex: 1;
 }
 
+.logout-link {
+  color: #ff4d4d !important;
+}
+
 .logout-link:hover {
   background: rgba(255, 77, 77, 0.1);
-  color: #ff4d4d;
+  color: #ff3333 !important;
 }
 
 /* --- 2. Main Content Area --- */
@@ -163,12 +167,71 @@
   outline: none;
 }
 
+/* Notifications */
+.notif-btn {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--color-text-secondary);
+  transition: all var(--duration-fast);
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border-light);
+}
+
+.notif-btn:hover {
+  background: var(--color-surface);
+  color: var(--color-primary);
+  border-color: var(--color-primary-light);
+}
+
+.notif-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-accent);
+  border: 2px solid var(--color-surface);
+  border-radius: 50%;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.user-info {
+  text-align: right;
+  line-height: 1.2;
+}
+
+.user-name {
+  display: block;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-sm);
+  color: var(--color-text);
+}
+
+.user-status {
+  display: block;
+  font-size: 10px;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 .p-avatar {
   width: 44px;
   height: 44px;
   border-radius: 50%;
   overflow: hidden;
   border: 2px solid var(--color-accent-light);
+  box-shadow: 0 0 15px hsla(174, 80%, 39%, 0.2);
 }
 
 .p-avatar img {
@@ -204,16 +267,34 @@
 /* Sanctuary Hero */
 .sanctuary-hero {
   background: linear-gradient(135deg, var(--color-surface), var(--color-bg-alt));
-  padding: var(--space-2xl);
+  padding: var(--space-3xl) var(--space-2xl);
   border-radius: var(--radius-2xl);
   display: flex;
   justify-content: space-between;
   align-items: center;
   border: 1px solid var(--color-border-light);
   box-shadow: var(--shadow-md);
-  min-height: 300px;
+  min-height: 320px;
   position: relative;
   overflow: hidden;
+}
+
+.hero-bg-accent {
+  position: absolute;
+  top: -150px;
+  right: -150px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, hsla(174, 80%, 39%, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  max-width: 600px;
 }
 
 .greeting-tag {

@@ -30,7 +30,7 @@
     <nav class="nav-links" role="navigation" aria-label="Main navigation">
       <ul>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle">Home</a>
+          <a href="#" class="dropdown-toggle">Home <svg class="dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></a>
           <ul class="dropdown-menu">
             <li><a href="../index.html">Home V1</a></li>
             <li><a href="../home-v2.html">Home V2</a></li>
@@ -41,7 +41,7 @@
         <li><a href="services.html" class="active">Services</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle">Dashboard</a>
+          <a href="#" class="dropdown-toggle">Dashboard <svg class="dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></a>
           <ul class="dropdown-menu">
             <li><a href="user-dashboard.html">User Dashboard</a></li>
             <li><a href="admin-dashboard.html">Admin Dashboard</a></li>
@@ -53,7 +53,7 @@
     <div class="nav-actions">
       <button class="theme-toggle" aria-label="Toggle theme" id="header-theme-toggle"></button>
       <button class="rtl-toggle" aria-label="Toggle RTL" id="header-rtl-toggle"></button>
-      <a href="login.html" class="nav-cta" id="header-cta">Get Started</a>
+      <a href="login.html" class="nav-cta" id="header-cta">Login</a>
     </div>
 
     <button class="hamburger" aria-label="Open menu" aria-expanded="false" id="hamburger-btn">
@@ -85,24 +85,14 @@
 
     <nav class="sidenav-links" role="navigation" aria-label="Mobile navigation links">
       <ul>
-        <li class="sidenav-dropdown">
-          <div class="sidenav-dropdown-toggle">Home</div>
-          <ul class="sidenav-dropdown-menu">
-            <li><a href="../index.html">Home V1</a></li>
-            <li><a href="../home-v2.html">Home V2</a></li>
-          </ul>
-        </li>
+        <li><a href="../index.html">Home V1</a></li>
+        <li><a href="../home-v2.html">Home V2</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="journeys.html">Journeys</a></li>
         <li><a href="services.html" class="active">Services</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li class="sidenav-dropdown">
-          <div class="sidenav-dropdown-toggle">Dashboard</div>
-          <ul class="sidenav-dropdown-menu">
-            <li><a href="user-dashboard.html">User Dashboard</a></li>
-            <li><a href="admin-dashboard.html">Admin Dashboard</a></li>
-          </ul>
-        </li>
+        <li><a href="user-dashboard.html">User Dashboard</a></li>
+        <li><a href="admin-dashboard.html">Admin Dashboard</a></li>
       </ul>
     </nav>
     <div class="sidenav-divider"></div>
@@ -111,7 +101,7 @@
       <button class="rtl-toggle" id="sidenav-rtl-toggle"></button>
     </div>
     <div class="sidenav-divider"></div>
-    <a href="login.html" class="nav-cta sidenav-cta" id="sidenav-cta">Get Started</a>
+    <a href="login.html" class="nav-cta sidenav-cta" id="sidenav-cta">Login</a>
   </aside>
 
   <!-- ================================================
@@ -199,8 +189,8 @@
          <div class="coaching-grid">
             <div class="coaching-text reveal">
               <span class="section-tag">Clinical Integration</span>
-              <h2 class="section-title-v2">Human Empathy<br>Sonic Precision</h2>
-              <p style="color: var(--color-text-secondary); line-height: 1.6;">Our Guided Mastery tier pairs you with a certified Silensia neural coach. Through bi-weekly integration calls, your coach helps you navigate emotional blockages uncovered during your binaural sessions and manually adjusts the frequencies of your upcoming tracks to match your current baseline.</p>
+              <h2 class="section-title-v2">Human Empathy Sonic Precision</h2>
+              <p>Our Guided Mastery tier pairs you with a certified Silensia neural coach. Through bi-weekly integration calls, your coach helps you navigate emotional blockages uncovered during your binaural sessions and manually adjusts the frequencies of your upcoming tracks to match your current baseline.</p>
               
               <ul class="coaching-details">
                 <li>Real-time track synthesis based on stress bio-feedback.</li>
@@ -209,6 +199,61 @@
               </ul>
             </div>
             <div class="coaching-img reveal"></div>
+         </div>
+      </div>
+    </section>
+
+    <!-- NEW SECTION 2: BIOMETRIC ECOSYSTEM -->
+    <section class="biometric-ecosystem section-pad">
+      <div class="container ecosys-grid">
+         <div class="ecosys-info reveal">
+            <span class="section-tag">Infrastructure Integration</span>
+            <h2 class="section-title-v2 text-white">Sovereign Sync</h2>
+            <p class="text-white-muted" style="margin-bottom: var(--space-xl);">Silensia bridges the gap between your auditory environment and your physiological reality. By syncing with leading wearable ecosystems, we automate the calibration of your sessions.</p>
+            
+            <div class="ecosys-brands">
+               <div class="brand-pill">Apple Health</div>
+               <div class="brand-pill">Oura Ring</div>
+               <div class="brand-pill">Garmin</div>
+               <div class="brand-pill">Whoop</div>
+            </div>
+         </div>
+         <div class="ecosys-visual reveal">
+            <!-- Glass dashboard representing biometric integration -->
+            <div class="ecosys-card">
+               <div class="e-header">Biometric Pulse</div>
+               <div class="e-body">
+                  <div class="e-stat pulse"><span>HRV</span><strong>64ms</strong></div>
+                  <div class="e-stat"><span>Stress</span><strong>Low</strong></div>
+               </div>
+               <div class="e-footer">Syncing via Silensia Core...</div>
+            </div>
+         </div>
+      </div>
+    </section>
+
+    <!-- NEW SECTION 1: CLINICAL ADVISORY -->
+    <section class="clinical-advisory section-pad bg-alt">
+      <div class="container">
+         <div class="section-header-v2 text-center" style="margin-bottom: var(--space-3xl);">
+            <span class="section-tag reveal">Scientific Oversight</span>
+            <h2 class="section-title-v2 reveal">Clinical Advisory Council</h2>
+            <p class="section-subtitle-v2 reveal" style="max-width: 650px; margin: 0 auto;">Our services are governed by an elite council of neuro-acousticians and clinical psychologists, ensuring foundational integrity in every sonic architecture.</p>
+         </div>
+         
+         <div class="advisory-grid reveal">
+            <div class="council-item">
+               <h4>Board Oversight</h4>
+               <p>Rigorous clinical auditing of all binaural baseline frequencies and linguistic reframing scripts.</p>
+            </div>
+            <div class="council-item">
+               <h4>Peer-Review Logic</h4>
+               <p>Our methodologies are consistently benchmarked against active studies in cognitive behavioral acoustics.</p>
+            </div>
+            <div class="council-item">
+               <h4>Ethical Guardrails</h4>
+               <p>Strict non-commodified data protocols ensuring user safety remains the primary architectural goal.</p>
+            </div>
          </div>
       </div>
     </section>

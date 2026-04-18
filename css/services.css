@@ -179,14 +179,24 @@
   width: 100%;
 }
 
-@media (max-width: 991px) {
-  .pricing-grid { grid-template-columns: 1fr 1fr; }
+@media (max-width: 1024px) {
+  .pricing-grid { 
+    grid-template-columns: 1fr 1fr; 
+    gap: var(--space-xl);
+  }
   .pricing-card.premium { transform: none; z-index: 1; }
   .pricing-card.premium:hover { transform: translateY(-8px); }
+
+  .pricing-card:nth-child(3) {
+    grid-column: 1 / span 2;
+    justify-self: center;
+    width: 100%;
+    max-width: calc(50% - var(--space-xl) / 2);
+  }
 }
 
 /* ---------- RESPONSIVE - LOCKED MOBILE ---------- */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 
   .pricing-grid { 
     grid-template-columns: 1fr; 
@@ -194,9 +204,14 @@
   }
   
   .pricing-card {
-    width: 92%; /* Ensure equal gaps on both sides */
+    width: 100% !important;
     margin: 0 auto;
-    padding: var(--space-xl) var(--space-lg); /* Optimized internal spacing for mobile */
+    padding: var(--space-xl) var(--space-lg);
+  }
+
+  .pricing-card:nth-child(3) {
+    grid-column: auto !important;
+    max-width: 100% !important;
   }
 }
 
@@ -209,7 +224,7 @@
 
 .coaching-grid { 
   display: grid; 
-  grid-template-columns: 1fr 1fr; 
+  grid-template-columns: 1.25fr 0.75fr; 
   gap: var(--space-3xl); 
   align-items: center; 
 }
@@ -218,7 +233,7 @@
   border-radius: var(--radius-xl); 
   overflow: hidden; 
   box-shadow: var(--shadow-md); 
-  height: 600px; 
+  height: 450px; 
   background-image: url("../images/services/Clinical Integration.jpg");
   background-size: cover;
   background-position: center;
@@ -230,9 +245,15 @@
   margin: var(--space-xl) 0;
 }
 
+.coaching-text p {
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
 .coaching-details li {
   margin-bottom: var(--space-md);
   font-size: var(--fs-md);
+  color: var(--color-text-secondary);
   padding-left: 20px;
   position: relative;
 }
@@ -921,5 +942,184 @@
 
   .pricing-card.premium {
     transform: scale(1.08); /* Increase prominence slightly */
+  }
+}
+
+/* --- NEW SECTIONS: ADVISORY & ECOSYSTEM --- */
+
+.advisory-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-2xl);
+}
+
+.council-item {
+  padding: 40px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  transition: transform var(--duration-normal);
+}
+
+.council-item:hover {
+  transform: translateY(-5px);
+}
+
+.council-item h4 {
+  font-size: var(--fs-lg);
+  color: var(--color-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.biometric-ecosystem {
+  background: radial-gradient(circle at top right, hsla(218, 55%, 35%, 1), hsla(218, 55%, 20%, 1));
+  position: relative;
+  overflow: hidden;
+  padding: 120px 0; /* Reduced as requested */
+}
+
+.clinical-advisory {
+  padding: 40px 0; /* Added small vertical padding as requested */
+}
+
+.ecosys-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: var(--space-3xl);
+}
+
+.ecosys-info h2 {
+  font-size: var(--fs-3xl);
+  color: #fff;
+  margin-bottom: var(--space-md);
+  letter-spacing: -0.02em;
+}
+
+.ecosys-brands {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  margin-top: var(--space-2xl);
+}
+
+.brand-pill {
+  padding: 10px 24px;
+  background: hsla(0,0%,100%,0.05);
+  border: 1px solid hsla(0,0%,100%,0.1);
+  border-radius: var(--radius-full);
+  color: #fff;
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all var(--duration-fast);
+  cursor: pointer;
+}
+
+.brand-pill:hover {
+  background: hsla(0,0%,100%,0.15);
+  border-color: var(--color-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.ecosys-card {
+  background: hsla(0,0%,100%,0.03);
+  backdrop-filter: blur(25px);
+  border: 1px solid hsla(0,0%,100%,0.1);
+  border-radius: 40px;
+  padding: 50px;
+  color: #fff;
+  box-shadow: 0 50px 100px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+.ecosys-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, hsla(0,0%,100%,0.3), transparent);
+}
+
+.e-header {
+  font-size: var(--fs-sm);
+  opacity: 0.6;
+  margin-bottom: var(--space-xl);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.e-body {
+  display: flex;
+  gap: 60px;
+  margin-bottom: var(--space-xl);
+}
+
+.e-stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.e-stat span {
+  font-size: var(--fs-xs);
+  opacity: 0.5;
+  margin-bottom: 8px;
+}
+
+.e-stat strong {
+  font-size: 3.5rem;
+  color: var(--color-accent);
+  font-family: var(--font-heading);
+  line-height: 1;
+}
+
+.e-stat.pulse strong {
+  animation: statPulse 2s infinite ease-in-out;
+}
+
+@keyframes statPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(0.98); }
+}
+
+.e-footer {
+  font-size: var(--fs-sm);
+  opacity: 0.5;
+  font-family: monospace;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.e-footer::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: var(--color-accent);
+  border-radius: 50%;
+  animation: syncPulse 1.5s infinite;
+}
+
+@keyframes syncPulse {
+  0% { transform: scale(1); opacity: 1; box-shadow: 0 0 0 0 rgba(0, 243, 255, 0.7); }
+  70% { transform: scale(1.2); opacity: 0.5; box-shadow: 0 0 0 10px rgba(0, 243, 255, 0); }
+  100% { transform: scale(1); opacity: 1; box-shadow: 0 0 0 0 rgba(0, 243, 255, 0); }
+}
+
+.text-white-muted {
+  color: hsla(0,0%,100%,0.6);
+}
+
+@media (max-width: 991px) {
+  .advisory-grid, .ecosys-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .ecosys-brands {
+    justify-content: center;
   }
 }

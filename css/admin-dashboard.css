@@ -115,9 +115,13 @@
   flex: 1;
 }
 
+.logout-link {
+  color: #ff4d4d !important;
+}
+
 .logout-link:hover {
   background: hsla(0, 80%, 50%, 0.15);
-  color: #ff4d4d;
+  color: #ff3333 !important;
 }
 
 /* --- 2. Main Content Area --- */
@@ -219,6 +223,39 @@
   background: var(--color-bg);
   box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
   outline: none;
+}
+
+/* Notifications */
+.notif-btn {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--color-text-secondary);
+  transition: all var(--duration-fast);
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border-light);
+}
+
+.notif-btn:hover {
+  background: var(--color-bg);
+  color: var(--color-primary);
+  border-color: var(--color-primary-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.notif-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-accent);
+  border: 2px solid var(--color-surface);
+  border-radius: 50%;
 }
 
 .admin-profile {

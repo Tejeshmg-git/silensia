@@ -554,14 +554,19 @@
   transform: translateY(0);
 }
 
-/* --- Breakpoints (Tablet Refinements) - LOCKED --- */
-@media (max-width: 768px) {
+/* --- Breakpoints (Tablet Refinements) --- */
+@media (max-width: 1024px) {
 
   .approach-row, .approach-row.reverse {
     grid-template-columns: 1fr;
+    gap: var(--space-xl);
   }
 
-  /* Values Grid: 2+1 Centered Diamond for Tablet */
+  .approach-visual {
+    height: 320px;
+  }
+
+  /* Values Grid: 2+1 Centered Diamond for Tablet (Up to 1024px) */
   .values-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -576,7 +581,7 @@
   /* Practitioner Grid: 2+1 Centered Diamond for Tablet */
   .practitioner-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-xl); /* Tighten gap slightly for better tablet fit */
+    gap: var(--space-xl);
   }
 
   .practitioner-card:nth-child(3) {
@@ -637,3 +642,115 @@
   }
 }
 
+.ethical-stats-mini {
+  display: flex;
+  gap: var(--space-xl);
+  margin-top: var(--space-xl);
+}
+
+.e-mini-stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.e-mini-stat strong {
+  font-size: var(--fs-xl);
+  color: var(--color-primary);
+}
+
+.e-mini-stat span {
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+}
+
+.global-resonance {
+  padding: 120px 0;
+  background: var(--color-bg-alt);
+}
+
+.resonance-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-2xl);
+}
+
+.resonance-item {
+  padding: 40px;
+  background: var(--color-surface);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  transition: transform var(--duration-normal);
+}
+
+.resonance-item:hover {
+  transform: translateY(-5px);
+}
+
+.r-num {
+  display: block;
+  font-size: var(--fs-4xl);
+  font-weight: var(--fw-bold);
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  margin-bottom: 8px;
+}
+
+.r-label {
+  font-size: var(--fs-sm);
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.ethical-practice {
+  padding: 120px 0;
+}
+
+.ethical-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3xl);
+  align-items: center;
+}
+
+.ethical-features {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.e-feat {
+  display: flex;
+  gap: var(--space-lg);
+  align-items: flex-start;
+}
+
+.e-icon {
+  font-size: 32px;
+  line-height: 1;
+}
+
+.e-text h4 {
+  font-size: var(--fs-lg);
+  margin-bottom: 4px;
+}
+
+.e-text p {
+  font-size: var(--fs-sm);
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 991px) {
+  .resonance-grid {
+    grid-template-columns: 1fr;
+  }
+  .ethical-wrapper {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .e-feat {
+    flex-direction: column;
+    align-items: center;
+  }
+}

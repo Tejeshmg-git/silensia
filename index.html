@@ -33,7 +33,7 @@
     <nav class="nav-links" role="navigation" aria-label="Main navigation">
       <ul>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle active">Home</a>
+          <a href="#" class="dropdown-toggle active">Home <svg class="dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></a>
           <ul class="dropdown-menu">
             <li><a href="index.html">Home V1</a></li>
             <li><a href="home-v2.html">Home V2</a></li>
@@ -44,7 +44,7 @@
         <li><a href="pages/services.html">Services</a></li>
         <li><a href="pages/contact.html">Contact</a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle">Dashboard</a>
+          <a href="#" class="dropdown-toggle">Dashboard <svg class="dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></a>
           <ul class="dropdown-menu">
             <li><a href="pages/user-dashboard.html">User Dashboard</a></li>
             <li><a href="pages/admin-dashboard.html">Admin Dashboard</a></li>
@@ -57,7 +57,7 @@
     <div class="nav-actions">
       <button class="theme-toggle" aria-label="Toggle theme" id="header-theme-toggle"></button>
       <button class="rtl-toggle" aria-label="Toggle RTL" id="header-rtl-toggle"></button>
-      <a href="pages/login.html" class="nav-cta" id="header-cta">Get Started</a>
+      <a href="pages/login.html" class="nav-cta" id="header-cta">Login</a>
     </div>
 
     <!-- Hamburger (mobile/tablet only) -->
@@ -99,24 +99,14 @@
     <!-- Sidenav Links -->
     <nav class="sidenav-links" role="navigation" aria-label="Mobile navigation links">
       <ul>
-        <li class="sidenav-dropdown">
-          <div class="sidenav-dropdown-toggle">Home</div>
-          <ul class="sidenav-dropdown-menu">
-            <li><a href="index.html" class="active">Home V1</a></li>
-            <li><a href="home-v2.html">Home V2</a></li>
-          </ul>
-        </li>
+        <li><a href="index.html" class="active">Home V1</a></li>
+        <li><a href="home-v2.html">Home V2</a></li>
         <li><a href="pages/about.html">About</a></li>
         <li><a href="pages/journeys.html">Journeys</a></li>
         <li><a href="pages/services.html">Services</a></li>
         <li><a href="pages/contact.html">Contact</a></li>
-        <li class="sidenav-dropdown">
-          <div class="sidenav-dropdown-toggle">Dashboard</div>
-          <ul class="sidenav-dropdown-menu">
-            <li><a href="pages/user-dashboard.html">User Dashboard</a></li>
-            <li><a href="pages/admin-dashboard.html">Admin Dashboard</a></li>
-          </ul>
-        </li>
+        <li><a href="pages/user-dashboard.html">User Dashboard</a></li>
+        <li><a href="pages/admin-dashboard.html">Admin Dashboard</a></li>
       </ul>
     </nav>
 
@@ -131,7 +121,7 @@
     <div class="sidenav-divider"></div>
 
     <!-- Sidenav CTA -->
-    <a href="pages/login.html" class="nav-cta sidenav-cta" id="sidenav-cta">Get Started</a>
+    <a href="pages/login.html" class="nav-cta sidenav-cta" id="sidenav-cta">Login</a>
 
   </aside>
 
@@ -271,6 +261,49 @@
               <div class="freq-bar"></div>
               <div class="freq-bar"></div>
           </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- NEW SECTION 1: THE NEURAL SANCTUARY -->
+    <section class="neural-sanctuary">
+      <div class="container sanctuary-grid">
+        <div class="sanctuary-mockup reveal">
+           <div class="mockup-frame">
+              <img src="images/Home V1/The Neural Sanctuary.jpg" alt="Neural Sanctuary Dashboard" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-lg);">
+           </div>
+        </div>
+        <div class="sanctuary-info reveal">
+           <span class="section-tag">Digital Gateway</span>
+           <h2 class="section-title">The Neural <span>Sanctuary</span></h2>
+           <p class="section-text">Your biological dashboard, accessible anywhere. The Sanctuary provides real-time insights into your brainwave entrainment, heart rate variability, and long-term cognitive growth. Monitor your transformation with data-driven precision.</p>
+           
+           <ul class="premium-list">
+             <li>Real-time HRV Biometric Sync</li>
+             <li>Advanced Neural Growth Analytics</li>
+             <li>Cross-platform Audio Continuity</li>
+           </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW SECTION 2: ACOUSTIC ARCHITECTURE -->
+    <section class="acoustic-architecture">
+      <div class="container acoustic-grid">
+        <div class="acoustic-info reveal">
+           <span class="section-tag">Precision Engineering</span>
+           <h2 class="section-title">Acoustic <span>Architecture</span></h2>
+           <p class="section-text">Our audio environments are not just "recorded"—they are architected. Using HRTF biological mapping, we create a 360-degree spatial sanctuary where every harmonic layer is placed with clinical precision to induce specific brainwave states.</p>
+           
+           <ul class="premium-list">
+             <li>3D Spatial Soundstage Mapping</li>
+             <li>Harmonic Resonance Layering</li>
+             <li>Atmospheric Contextual Engine</li>
+           </ul>
+        </div>
+        <div class="acoustic-visual reveal">
+           <img src="images/Home V1/Precision Engineering.jpg" alt="Acoustic Architecture Engineering" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-xl);">
         </div>
       </div>
     </section>

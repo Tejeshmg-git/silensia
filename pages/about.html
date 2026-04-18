@@ -30,7 +30,7 @@
     <nav class="nav-links" role="navigation" aria-label="Main navigation">
       <ul>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle">Home</a>
+          <a href="#" class="dropdown-toggle">Home <svg class="dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></a>
           <ul class="dropdown-menu">
             <li><a href="../index.html">Home V1</a></li>
             <li><a href="../home-v2.html">Home V2</a></li>
@@ -41,7 +41,7 @@
         <li><a href="services.html">Services</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle">Dashboard</a>
+          <a href="#" class="dropdown-toggle">Dashboard <svg class="dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></a>
           <ul class="dropdown-menu">
             <li><a href="user-dashboard.html">User Dashboard</a></li>
             <li><a href="admin-dashboard.html">Admin Dashboard</a></li>
@@ -53,7 +53,7 @@
     <div class="nav-actions">
       <button class="theme-toggle" aria-label="Toggle theme" id="header-theme-toggle"></button>
       <button class="rtl-toggle" aria-label="Toggle RTL" id="header-rtl-toggle"></button>
-      <a href="login.html" class="nav-cta" id="header-cta">Get Started</a>
+      <a href="login.html" class="nav-cta" id="header-cta">Login</a>
     </div>
 
     <button class="hamburger" aria-label="Open menu" aria-expanded="false" id="hamburger-btn">
@@ -85,24 +85,14 @@
 
     <nav class="sidenav-links" role="navigation" aria-label="Mobile navigation links">
       <ul>
-        <li class="sidenav-dropdown">
-          <div class="sidenav-dropdown-toggle">Home</div>
-          <ul class="sidenav-dropdown-menu">
-            <li><a href="../index.html">Home V1</a></li>
-            <li><a href="../home-v2.html">Home V2</a></li>
-          </ul>
-        </li>
+        <li><a href="../index.html">Home V1</a></li>
+        <li><a href="../home-v2.html">Home V2</a></li>
         <li><a href="about.html" class="active">About</a></li>
         <li><a href="journeys.html">Journeys</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li class="sidenav-dropdown">
-          <div class="sidenav-dropdown-toggle">Dashboard</div>
-          <ul class="sidenav-dropdown-menu">
-            <li><a href="user-dashboard.html">User Dashboard</a></li>
-            <li><a href="admin-dashboard.html">Admin Dashboard</a></li>
-          </ul>
-        </li>
+        <li><a href="user-dashboard.html">User Dashboard</a></li>
+        <li><a href="admin-dashboard.html">Admin Dashboard</a></li>
       </ul>
     </nav>
     <div class="sidenav-divider"></div>
@@ -111,7 +101,7 @@
       <button class="rtl-toggle" id="sidenav-rtl-toggle"></button>
     </div>
     <div class="sidenav-divider"></div>
-    <a href="login.html" class="nav-cta sidenav-cta" id="sidenav-cta">Get Started</a>
+    <a href="login.html" class="nav-cta sidenav-cta" id="sidenav-cta">Login</a>
   </aside>
 
   <!-- ================================================
@@ -155,7 +145,7 @@
       </div>
     </section>
 
-    <!-- 3. Core Values (The extra section requested) -->
+    <!-- 3. Core Values -->
     <section class="core-values">
       <div class="container">
         <div class="section-header-v2 text-center">
@@ -177,6 +167,26 @@
             <div class="value-number">03</div>
             <h3>Aesthetic Tranquility</h3>
             <p>Our commitment to premium design isn't just for looks; it acts as an environmental cue that lowers cortisol the moment you log in.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Experience & Certifications -->
+    <section class="certifications-banner">
+      <div class="container banner-inner reveal">
+        <div class="cert-stats">
+          <div class="cert-item">
+            <span class="cert-num">20+</span>
+            <span class="cert-label">Years Clinical Experience</span>
+          </div>
+          <div class="cert-item">
+            <span class="cert-num">15</span>
+            <span class="cert-label">Board Certified Providers</span>
+          </div>
+          <div class="cert-item">
+            <span class="cert-num">A.P.A</span>
+            <span class="cert-label">Endorsed Practices</span>
           </div>
         </div>
       </div>
@@ -216,27 +226,82 @@
       </div>
     </section>
 
-    <!-- 5. Experience & Certifications -->
-    <section class="certifications-banner">
-      <div class="container banner-inner reveal">
-        <div class="cert-stats">
-          <div class="cert-item">
-            <span class="cert-num">20+</span>
-            <span class="cert-label">Years Clinical Experience</span>
+
+    <!-- NEW SECTION 1: GLOBAL RESONANCE -->
+    <section class="global-resonance section-pad bg-alt">
+      <div class="container text-center">
+        <div class="section-header-v2" style="margin-bottom: var(--space-3xl);">
+          <span class="section-tag reveal">Social Impact</span>
+          <h2 class="section-title-v2 reveal">Global Resonance</h2>
+          <p class="section-subtitle-v2 reveal">Our sequences reach across borders, providing clinical-grade tranquility to a growing international community.</p>
+        </div>
+        
+        <div class="resonance-grid reveal">
+          <div class="resonance-item">
+            <span class="r-num">120+</span>
+            <span class="r-label">Countries reached</span>
           </div>
-          <div class="cert-item">
-            <span class="cert-num">15</span>
-            <span class="cert-label">Board Certified Providers</span>
+          <div class="resonance-item">
+            <span class="r-num">4.8M</span>
+            <span class="r-label">Minutes of meditation</span>
           </div>
-          <div class="cert-item">
-            <span class="cert-num">A.P.A</span>
-            <span class="cert-label">Endorsed Practices</span>
+          <div class="resonance-item">
+            <span class="r-num">98%</span>
+            <span class="r-label">User satisfaction rate</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 6. Our Practitioners -->
+    <!-- NEW SECTION 2: ETHICAL NEURO-PRACTICE -->
+    <section class="ethical-practice section-pad">
+      <div class="container">
+        <div class="ethical-wrapper reveal">
+           <div class="ethical-info">
+             <span class="section-tag">Privacy & Security</span>
+             <h2 class="section-title-v2">Ethical Neuro-Practice</h2>
+             <p class="section-subtitle-v2" style="margin-bottom: var(--space-xl);">At Silensia, your mental landscape is your own. We treat your subconscious data as a sacred trust, built on a foundation of absolute clinical privacy and sovereign data ownership. Our platform is engineered to prevent the commodification of human consciousness through three core pillars of neuro-ethics.</p>
+             
+             <div class="ethical-stats-mini">
+                <div class="e-mini-stat">
+                   <strong>100%</strong>
+                   <span>Data Sovereignty</span>
+                </div>
+                <div class="e-mini-stat">
+                   <strong>AES-256</strong>
+                   <span>End-to-End Encryption</span>
+                </div>
+             </div>
+           </div>
+           
+           <div class="ethical-features">
+              <div class="e-feat">
+                <div class="e-icon">🛡️</div>
+                <div class="e-text">
+                  <h4>Neural Sovereignty</h4>
+                  <p>In the digital age, your deep-focus metrics are a Fingerprint of the Self. We ensure that your neurological response patterns never leave your device unencrypted and are never used for external modeling.</p>
+                </div>
+              </div>
+              <div class="e-feat">
+                <div class="e-icon">⚖️</div>
+                <div class="e-text">
+                  <h4>Biometric Minimization</h4>
+                  <p>We only collect the biological markers—such as HRV cadence—necessary for real-time auditory calibration. All session-specific biometrics are anonymized and purged after 24 hours of local processing.</p>
+                </div>
+              </div>
+              <div class="e-feat">
+                <div class="e-icon">🔐</div>
+                <div class="e-text">
+                  <h4>Zero-Knowledge Architecture</h4>
+                  <p>Our engineers and practitioners cannot access your private journal entries or specific Behavioral Growth Loops. Your sanctuary remains yours, even from those who built it.</p>
+                </div>
+              </div>
+           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Practitioners Section -->
     <section class="practitioners">
       <div class="container">
          <div class="section-header-v2 text-center">

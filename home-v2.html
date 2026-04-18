@@ -30,7 +30,7 @@
     <nav class="nav-links" role="navigation">
       <ul>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle active">Home</a>
+          <a href="#" class="dropdown-toggle active">Home <svg class="dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></a>
           <ul class="dropdown-menu">
             <li><a href="index.html">Home V1</a></li>
             <li><a href="home-v2.html">Home V2</a></li>
@@ -41,7 +41,7 @@
         <li><a href="pages/services.html">Services</a></li>
         <li><a href="pages/contact.html">Contact</a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle">Dashboard</a>
+          <a href="#" class="dropdown-toggle">Dashboard <svg class="dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></a>
           <ul class="dropdown-menu">
             <li><a href="pages/user-dashboard.html">User Dashboard</a></li>
             <li><a href="pages/admin-dashboard.html">Admin Dashboard</a></li>
@@ -53,7 +53,7 @@
     <div class="nav-actions">
       <button class="theme-toggle" aria-label="Toggle theme" id="header-theme-toggle"></button>
       <button class="rtl-toggle" aria-label="Toggle RTL" id="header-rtl-toggle"></button>
-      <a href="pages/login.html" class="nav-cta">Explore Now</a>
+      <a href="pages/login.html" class="nav-cta">Login</a>
     </div>
 
     <button class="hamburger" id="hamburger-btn">
@@ -77,8 +77,17 @@
         <li><a href="pages/journeys.html">Journeys</a></li>
         <li><a href="pages/services.html">Services</a></li>
         <li><a href="pages/contact.html">Contact</a></li>
+        <li><a href="pages/user-dashboard.html">User Dashboard</a></li>
+        <li><a href="pages/admin-dashboard.html">Admin Dashboard</a></li>
       </ul>
     </nav>
+    <div class="sidenav-divider"></div>
+    <div class="sidenav-toggles">
+      <button class="theme-toggle" id="sidenav-theme-toggle"></button>
+      <button class="rtl-toggle" id="sidenav-rtl-toggle"></button>
+    </div>
+    <div class="sidenav-divider"></div>
+    <a href="pages/login.html" class="nav-cta sidenav-cta" id="sidenav-cta">Login</a>
   </aside>
 
   <!-- ================================================
@@ -138,19 +147,25 @@
         </div>
         <div class="path-grid">
           <div class="path-card" style="--card-index: 1;">
-            <div class="path-icon">💤</div>
+            <div class="path-img-box">
+              <img src="images/Home v2/Deep Rest.jpg" alt="Deep Rest">
+            </div>
             <h3>Deep Rest</h3>
             <p>Overcome insomnia and erratic sleep patterns with Theta-wave audio journeys.</p>
             <a href="pages/journeys.html" class="path-link">Explore Program &rarr;</a>
           </div>
           <div class="path-card active" style="--card-index: 2;">
-            <div class="path-icon">🔥</div>
+            <div class="path-img-box">
+              <img src="images/Home v2/Hyper Focus.jpg" alt="Hyper Focus">
+            </div>
             <h3>Hyper Focus</h3>
             <p>Master your attention and eliminate mental clutter for peak productivity.</p>
             <a href="pages/journeys.html" class="path-link">Explore Program &rarr;</a>
           </div>
           <div class="path-card" style="--card-index: 3;">
-            <div class="path-icon">🌿</div>
+            <div class="path-img-box">
+              <img src="images/Home v2/Anxiety Relief.jpg" alt="Anxiety Relief">
+            </div>
             <h3>Anxiety Relief</h3>
             <p>Gently rewire your nervous system to respond with calm in high-pressure moments.</p>
             <a href="pages/journeys.html" class="path-link">Explore Program &rarr;</a>
@@ -214,56 +229,187 @@
           <p class="section-subtitle-v2">Journeys crafted by world-class clinicians and mindfulness masters.</p>
         </div>
         <div class="experts-grid">
+          <!-- Member 1 -->
           <div class="expert-profile">
             <div class="expert-img-container">
-               <img src="images/Home V1/Marcus Thorne.jpg" alt="Dr. Aris Thorne" class="expert-img">
+               <img src="images/Home V1/Marcus Thorne.jpg" alt="Elias Thorne" class="expert-img">
+               <div class="expert-socials">
+                 <a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg></a>
+                 <a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                 <a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+               </div>
             </div>
-            <h4>Dr. Aris Thorne</h4>
-            <span>Lead Clinical Hypnotherapist</span>
+            <div class="expert-info">
+              <span class="expert-badge">Founding Member</span>
+              <h4>Elias Thorne</h4>
+              <span class="expert-role">Lead Curator & Strategist</span>
+              <p>Over 15 years of experience in fine arts appraisal and digital marketplace ecosystems.</p>
+              <div class="expert-tags">
+                <span class="skill-tag">Art History</span>
+                <span class="skill-tag">Market Trends</span>
+              </div>
+            </div>
           </div>
+
+          <!-- Member 2 -->
           <div class="expert-profile">
             <div class="expert-img-container">
-               <img src="images/Home V1/Sarah Jenkins.jpg" alt="Sarah El-Amin" class="expert-img">
+               <img src="images/Home V1/Sarah Jenkins.jpg" alt="Sanae Murakami" class="expert-img">
+               <div class="expert-socials">
+                <a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg></a>
+                <a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                <a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+               </div>
             </div>
-            <h4>Sarah El-Amin</h4>
-            <span>Mindfulness Director</span>
+            <div class="expert-info">
+              <span class="expert-badge">Creative Visionary</span>
+              <h4>Sanae Murakami</h4>
+              <span class="expert-role">Head of Creative Direction</span>
+              <p>Leading all visual narratives and artist collaboration programs globally.</p>
+              <div class="expert-tags">
+                <span class="skill-tag">Visual Storytelling</span>
+                <span class="skill-tag">Brand Identity</span>
+              </div>
+            </div>
           </div>
+
+          <!-- Member 3 -->
           <div class="expert-profile">
             <div class="expert-img-container">
                <img src="images/Home V1/Elena Rodriguez.jpg" alt="Marcus Vance" class="expert-img">
+               <div class="expert-socials">
+                <a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg></a>
+                <a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                <a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+               </div>
             </div>
-            <h4>Marcus Vance</h4>
-            <span>Somatic Breathwork Coach</span>
+            <div class="expert-info">
+              <span class="expert-badge">Platform Architect</span>
+              <h4>Marcus Vance</h4>
+              <span class="expert-role">Director of Engineering</span>
+              <p>Architecting the high-performance creative engine that powers the ecosystem.</p>
+              <div class="expert-tags">
+                <span class="skill-tag">System Architecture</span>
+                <span class="skill-tag">Provenance Tech</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 6: KNOWLEDGE BASE (FAQ Accordion) -->
+    <!-- SECTION 6: KNOWLEDGE BASE (Enhanced Split Layout) -->
     <section class="section-faq">
-      <div class="container faq-container">
-        <div class="section-header-v2">
-          <h2 class="section-title-v2">Curiosity & Clarity</h2>
+      <div class="faq-split-container">
+        <!-- Sidebar Panel -->
+        <div class="faq-sidebar">
+          <div class="faq-sidebar-content">
+            <h2 class="faq-main-title">Curiosity <br> & Clarity</h2>
+            <p class="faq-main-subtitle">Everything you need to know about the science and practice of Silensia.</p>
+          </div>
+          <!-- Abstract Background Shapes -->
+          <div class="faq-shapes">
+            <div class="shape-circle"></div>
+            <div class="shape-semi"></div>
+          </div>
+          <!-- Pointer Triangle -->
+          <div class="faq-pointer"></div>
         </div>
-        <div class="faq-list">
-          <div class="faq-item">
-            <button class="faq-question">What is Hypnotherapy exactly? <span>+</span></button>
-            <div class="faq-answer">
-              <p>It is a state of focused attention where the mind is highly responsive to positive suggestion. It is not "mind control"; you are always in charge.</p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question">How often should I listen to a journey? <span>+</span></button>
-            <div class="faq-answer">
-              <p>Consistency is key. We recommend one 15-20 minute session daily for at least 21 days to see neuroplastic changes.</p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question">Is it safe for everyone? <span>+</span></button>
-            <div class="faq-answer">
-              <p>While safe for most, we recommend consulting a physician if you have a history of severe mental health conditions like epilepsy or schizophrenia.</p>
-            </div>
-          </div>
+
+        <!-- content Panel -->
+        <div class="faq-main-content">
+          <ul class="faq-grid-list">
+            <li class="faq-grid-item">
+              <div class="faq-item-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                  <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                </svg>
+              </div>
+              <div class="faq-item-text">
+                <h3>What is Hypnotherapy?</h3>
+                <p>A state of focused attention where the mind is highly responsive to positive suggestion. It is not mind control; you are always in charge.</p>
+              </div>
+            </li>
+            <li class="faq-grid-item">
+              <div class="faq-item-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                  <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                </svg>
+              </div>
+              <div class="faq-item-text">
+                <h3>Is it Scientifically Proven?</h3>
+                <p>Yes. Clinical studies show that guided neuromodulation can rewire neural pathways, reducing cortisol and enhancing GABA production.</p>
+              </div>
+            </li>
+            <li class="faq-grid-item">
+              <div class="faq-item-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                  <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                </svg>
+              </div>
+              <div class="faq-item-text">
+                <h3>Frequency of Practice</h3>
+                <p>Consistency is key. We recommend one 15-20 minute session daily for at least 21 days to see measurable neuroplastic changes.</p>
+              </div>
+            </li>
+            <li class="faq-grid-item">
+              <div class="faq-item-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                  <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                </svg>
+              </div>
+              <div class="faq-item-text">
+                <h3>Safe for Everyone?</h3>
+                <p>While safe for most, we recommend consulting a physician if you have a history of severe mental health conditions like epilepsy.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+    <!-- NEW SECTION 1: SOMATIC SEQUENCE -->
+    <section class="somatic-sequence">
+      <div class="container somatic-grid">
+        <div class="somatic-image reveal">
+           <img src="images/Home v2/Biological Sync.jpg" alt="Biological Sync Visualization">
+        </div>
+        <div class="somatic-info reveal">
+           <span class="section-tag">Biological Sync</span>
+           <h2 class="section-title-v2">Align the Breath, <br><span>Anchor the Mind</span></h2>
+           <p class="section-subtitle-v2" style="margin-left: 0; text-align: left;">The Silensia protocol begins with somatic awareness. By synchronizing your breath cadence with our auditory pulses, you manually downregulate your nervous system.</p>
+           
+           <div class="feature-pill-list">
+             <span class="feat-pill">HRV Bio-feedback</span>
+             <span class="feat-pill">Breath Cadence Sync</span>
+             <span class="feat-pill">Vagus Nerve Reset</span>
+           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW SECTION 2: ACOUSTIC ARCHITECTURE -->
+    <section class="acoustic-architecture">
+      <div class="container acoustic-grid">
+        <div class="acoustic-info reveal">
+           <span class="section-tag">Precision Engineering</span>
+           <h2 class="section-title-v2">Acoustic <span class="text-gradient">Architecture</span></h2>
+           <p class="section-subtitle-v2" style="margin-left: 0; text-align: left;">Our audio environments are architected using HRTF biological mapping. We create a 360-degree spatial sanctuary where every harmonic layer is placed with clinical precision.</p>
+           
+           <div class="enterprise-actions" style="margin-top: var(--space-xl);">
+             <a href="pages/journeys.html" class="btn-filled">Explore Soundscapes</a>
+           </div>
+        </div>
+        <div class="acoustic-visual reveal">
+           <img src="images/Home v2/Precision Engineering.jpg" alt="Precision Engineering Visual" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-xl);">
         </div>
       </div>
     </section>
