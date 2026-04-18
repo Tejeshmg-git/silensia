@@ -457,6 +457,8 @@
 }
 
 .expert-profile {
+  display: flex;
+  flex-direction: column;
   text-align: center;
   transition: transform var(--duration-normal) var(--ease-smooth);
 }
@@ -525,6 +527,7 @@
   flex-direction: column;
   align-items: center;
   gap: 8px;
+  flex: 1;
 }
 
 .expert-badge {
@@ -558,7 +561,7 @@
   font-size: 14px;
   line-height: 1.5;
   max-width: 280px;
-  margin: 8px 0 var(--space-md);
+  margin: 8px 0 var(--space-sm);
 }
 
 /* Skill Tags */
@@ -567,6 +570,8 @@
   justify-content: center;
   gap: 8px;
   flex-wrap: wrap;
+  margin-top: auto;
+  padding-top: var(--space-sm);
 }
 
 .skill-tag {
@@ -740,32 +745,58 @@
    Finalized Tablet & Mobile behaviors
    ============================================================ */
 
-/* --- 8. Tablet Specific Rules (Up to 1023px) - LOCKED --- */
+/* --- 8. Tablet Tier Refinements (Up to 1023px) --- */
 @media (max-width: 1023px) {
-
-
   .stats-grid {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: var(--space-xl) !important;
   }
+}
 
-  /* Clean Stacked Layout for Choose Your Frequency on Tablet */
-  .path-grid {
-    grid-template-columns: 1fr !important;
-    gap: var(--space-lg) !important;
-    max-width: 600px;
-    margin-inline: auto;
+/* Unified Diamond Layout for Tablets & Laptops (540px - 1368px) */
+@media (min-width: 540px) and (max-width: 1368px) {
+  .v2-hero {
+    min-height: 60vh !important;
+    padding: calc(var(--header-height) + 40px) var(--container-pad) 40px !important;
   }
 
-  .path-card {
-    text-align: center; /* Better for centered stack */
-    padding: var(--space-xl);
+  .path-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: var(--space-xl) !important;
   }
 
   .path-card:nth-child(3) {
-    grid-column: auto !important;
-    justify-self: stretch !important;
+    grid-column: 1 / span 2 !important;
+    justify-self: center !important;
+    width: calc(50% - (var(--space-xl) / 2)) !important;
+    max-width: 600px !important;
+  }
+
+  .path-card {
+    text-align: left !important;
+    padding: var(--space-xl) !important;
+  }
+}
+
+/* FORCING STACK ONLY ON MOBILE (below 540px) */
+@media (max-width: 539px) {
+  .path-grid {
+    grid-template-columns: 1fr !important;
+    justify-items: center !important;
+    gap: var(--space-lg) !important;
+  }
+
+  .path-card {
+    width: 100% !important;
     max-width: 100% !important;
+    margin: 0 auto !important;
+    padding: var(--space-lg) !important;
+    text-align: center !important;
+  }
+  
+  .path-card:nth-child(3) {
+    grid-column: span 1 !important;
   }
 }
 
@@ -841,19 +872,7 @@
     font-size: var(--fs-hero);
   }
 
-  /* Centering Path Cards on Mobile */
-  .path-grid {
-    grid-template-columns: 1fr !important;
-    justify-items: center !important;
-    gap: var(--space-lg) !important;
-  }
-
-  .path-card {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 auto !important;
-    padding: var(--space-lg); /* Slightly tighter for mobile */
-  }
+  /* Centering Path Grid handled by mobile refinement block above */
 
 
   /* Audio Section Mobile Fixes */
@@ -899,22 +918,7 @@
 /* --- 11. Laptop & Desktop Tier Refinements (1024px+) --- */
 @media (min-width: 1024px) {
   
-  /* Path Grid: Handle 2+1 layout centering on small laptops (1024px range) */
-  @media (max-width: 1200px) {
-    .path-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    .path-card:nth-child(3) {
-      grid-column: 1 / span 2;
-      justify-self: center;
-      width: 100%;
-      max-width: calc(50% - var(--space-xl) / 2);
-    }
-    /* Re-align text to left for premium consistency */
-    .path-card {
-      text-align: left;
-    }
-  }
+  /* Path Grid: Diamond Layout logic now consolidated in unified tablet block above */
 
   /* Science Section: Image-first vertical stack for small laptops (1024px range) */
   @media (max-width: 1199px) {

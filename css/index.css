@@ -188,7 +188,7 @@
 .service-card {
   background-color: var(--color-surface);
   border-radius: var(--radius-xl);
-  padding: var(--space-2xl);
+  padding: var(--space-xl);
   box-shadow: var(--shadow-sm);
   border: 1px solid var(--color-border-light);
   transition: transform var(--duration-normal) var(--ease-smooth),
@@ -345,6 +345,7 @@
   position: relative;
   z-index: 2;
   background-color: transparent;
+  padding: var(--space-md) 0;
 }
 
 .step-number {
@@ -399,7 +400,7 @@
   background-color: var(--color-surface);
   border: 1px solid var(--color-border-light);
   border-radius: var(--radius-xl);
-  padding: var(--space-2xl);
+  padding: var(--space-xl);
   box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
@@ -438,30 +439,18 @@
   color: var(--color-text-secondary);
 }
 
-/* 7. Laptop View Diamond Layout (1024px - 1439px) */
-@media (min-width: 1024px) and (max-width: 1439px) {
-  .testimonial-grid, 
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: var(--space-2xl) !important;
-  }
-
-  .testimonial-card:nth-child(3), 
-  .service-card:nth-child(3) {
-    grid-column: 1 / span 2 !important;
-    justify-self: center !important;
-    max-width: calc(50% - 20px) !important;
-  }
-
-  /* Why Silensia (Benefits) Stack & Diamond */
+/* ============================================================
+   TABLET & LAPTOP DIAMOND LAYOUT (540px - 1368px)
+   ============================================================ */
+@media (min-width: 540px) and (max-width: 1368px) {
   .benefits {
     flex-direction: column !important;
     text-align: center !important;
-    gap: var(--space-2xl) !important;
+    gap: var(--space-3xl) !important;
   }
 
   .benefits-visual {
-    order: -1 !important; /* Image first */
+    order: -1 !important;
     width: 60% !important;
     max-width: 500px !important;
     margin: 0 auto !important;
@@ -471,22 +460,57 @@
     width: 100% !important;
   }
 
+  .testimonial-grid, 
+  .services-grid,
+  .steps-grid,
   .benefit-list {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 32px !important;
-    text-align: left !important;
-    margin-top: 40px !important;
+    gap: var(--space-2xl) !important;
+    justify-items: stretch !important;
   }
 
+  .testimonial-card:nth-child(3), 
+  .service-card:nth-child(3),
+  .step-card:nth-child(3),
   .benefit-item:nth-child(3) {
     grid-column: 1 / span 2 !important;
     justify-self: center !important;
-    max-width: 50% !important;
+    width: calc(50% - (var(--space-2xl) / 2)) !important;
+    max-width: 500px !important;
   }
 
-  .service-card, .testimonial-card {
+  /* Connecting line in steps-grid: Hide to maintain diamond purity */
+  .steps-grid::before {
+    display: none !important;
+  }
+
+  .service-card, .step-card, .testimonial-card, .benefit-item {
     height: 100% !important;
+    margin: 0 !important;
+  }
+
+  /* Benefits alignment for diamond */
+  .benefit-item {
+    text-align: left !important;
+  }
+}
+
+/* --- Specific Tablet Refinement (768px - 1024px) --- */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .services-grid, .testimonial-grid, .steps-grid, .benefit-list {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: var(--space-xl) !important; /* Slightly smaller gap to fit tablet width better */
+  }
+  
+  .service-card:nth-child(3), 
+  .step-card:nth-child(3), 
+  .testimonial-card:nth-child(3),
+  .benefit-item:nth-child(3) {
+    grid-column: 1 / span 2 !important;
+    justify-self: center !important;
+    width: calc(50% - (var(--space-xl) / 2)) !important;
+    max-width: 600px !important;
   }
 }
 
@@ -626,22 +650,6 @@
     margin: var(--space-xl) var(--container-pad);
     border-radius: var(--radius-xl);
   }
-
-  /* Diamond Layout for How Silensia Works (Tablet) */
-  .steps-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: var(--space-2xl) !important;
-  }
-
-  .step-card:nth-child(3) {
-    grid-column: 1 / span 2 !important;
-    justify-self: center !important;
-    max-width: 50% !important;
-  }
-
-  .steps-grid::before {
-    display: none !important; /* Hide connecting line on tablet diamond layout */
-  }
 }
 
 @media (max-width: 768px) {
@@ -672,11 +680,8 @@
   .glow-left { left: -140px; }
   .glow-right { right: -140px; }
 
-  /* EQUAL GAPS - Centering Testimonial Cards on Mobile */
+  /* EQUAL GAPS - Centering Testimonial Cards on Mobile (below 540px) */
   .testimonial-grid {
-    grid-template-columns: 1fr !important;
-    justify-items: center !important;
-    gap: var(--space-lg) !important;
     padding: 0 !important;
   }
 
@@ -686,24 +691,23 @@
     margin: 0 auto !important;
   }
 
-  /* FORCING STACK ON MOBILE (below 768px) - NO DIAMOND */
-  @media (max-width: 767px) {
-    .steps-grid {
+  /* FORCING STACK ON MOBILE (below 540px) - NO DIAMOND */
+  @media (max-width: 539px) {
+    .steps-grid, .services-grid, .testimonial-grid {
       grid-template-columns: 1fr !important;
       gap: var(--space-xl) !important;
     }
 
-    .step-card:nth-child(3) {
+    .step-card:nth-child(3), .service-card:nth-child(3), .testimonial-card:nth-child(3) {
       grid-column: span 1 !important;
       max-width: 100% !important;
       justify-self: stretch !important;
+      width: 100% !important;
     }
   }
 
-  /* Centering Our Programs (Services Grid) */
+  /* Our Programs Stack on smaller screens */
   .services-grid {
-    grid-template-columns: 1fr !important;
-    justify-items: center !important;
     gap: var(--space-xl) !important;
   }
 

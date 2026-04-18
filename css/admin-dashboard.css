@@ -688,6 +688,9 @@ input:checked + .slider:before {
   .page-title {
     font-size: 1rem;
     white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px; /* Prevent it from pushing things out */
   }
 
   .topbar-right .search-box {
@@ -747,8 +750,12 @@ input:checked + .slider:before {
     justify-content: center;
   }
   
+  .topbar-right {
+    gap: var(--space-md) !important;
+  }
+
   .admin-profile .profile-info {
-    display: none; /* Hide name/role text on small screens */
+    display: none !important; /* Strictly hide to prevent header damage */
   }
 
   /* --- Responsive Tables (Card View) --- */

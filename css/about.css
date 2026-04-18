@@ -592,6 +592,15 @@
   }
 }
 
+/* --- About Page Tablet Lock (540px - 1368px) --- */
+@media (min-width: 540px) and (max-width: 1368px) {
+  .about-hero {
+    min-height: 50vh !important;
+    padding-top: calc(var(--header-height) + 40px) !important;
+    padding-bottom: 40px !important;
+  }
+}
+
 /* --- Core Values Mobile Fix (Strictly < 768px) --- */
 @media (max-width: 767px) {
   .values-grid {
@@ -741,16 +750,33 @@
   color: var(--color-text-secondary);
 }
 
-@media (max-width: 991px) {
-  .resonance-grid {
-    grid-template-columns: 1fr;
-  }
+/* --- Tablet Refinements for Premium Sections (540px - 1024px) --- */
+@media (min-width: 540px) and (max-width: 1024px) {
   .ethical-wrapper {
-    grid-template-columns: 1fr;
-    text-align: center;
+    gap: var(--space-2xl) !important;
   }
+  .ethical-stats-mini {
+    justify-content: center;
+  }
+  .resonance-item {
+    padding: 30px !important;
+  }
+}
+
+/* --- Mobile Specific Stacking (Below 540px) --- */
+@media (max-width: 539px) {
+  .resonance-grid, 
+  .ethical-wrapper {
+    grid-template-columns: 1fr !important;
+    text-align: center !important;
+  }
+  
+  .ethical-stats-mini {
+    justify-content: center !important;
+  }
+
   .e-feat {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column !important;
+    align-items: center !important;
   }
 }

@@ -774,7 +774,23 @@
   height: 45px;
 }
 
-@media (max-width: 900px) {
+/* --- Tablet/Laptop Refinement (540px - 1368px) --- */
+@media (min-width: 540px) and (max-width: 1368px) {
+  .hub-wrapper {
+    padding: var(--space-2xl) !important;
+    gap: var(--space-xl) !important;
+  }
+  
+  .hub-player-glass {
+    min-width: 360px !important;
+  }
+
+  .now-playing-title {
+    font-size: var(--fs-xl) !important;
+  }
+}
+
+@media (max-width: 911px) {
   .hub-wrapper {
     flex-direction: column;
     padding: var(--space-xl);
@@ -1281,9 +1297,32 @@
   margin-bottom: var(--space-md);
 }
 
+/* --- Adaptive Hub Stacking --- */
 @media (max-width: 991px) {
-  .adaptive-grid, .mastery-grid {
+  .adaptive-grid {
     grid-template-columns: 1fr;
     text-align: center;
+  }
+}
+
+/* --- Mastery Grid Diamond Layout (540px - 1368px) --- */
+@media (min-width: 540px) and (max-width: 1368px) {
+  .mastery-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: var(--space-xl) !important;
+  }
+  
+  .mastery-tier:nth-child(3) {
+    grid-column: 1 / span 2 !important;
+    justify-self: center !important;
+    width: calc(50% - var(--space-xl) / 2) !important;
+  }
+}
+
+/* --- Mastery Grid Mobile Stacking (Below 540px) --- */
+@media (max-width: 539px) {
+  .mastery-grid {
+    grid-template-columns: 1fr !important;
+    text-align: center !important;
   }
 }
