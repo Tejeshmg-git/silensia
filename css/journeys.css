@@ -951,6 +951,19 @@
   }
 }
 
+/* --- Anatomy Grid Mobile Fix (Strictly < 768px) --- */
+@media (max-width: 767px) {
+  .anatomy-grid-v2 {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-xl) !important;
+  }
+
+  .anatomy-card-v2:nth-child(3) {
+    grid-column: auto !important;
+    max-width: 100% !important;
+  }
+}
+
 /* ---------- 6. FINAL CTA (V2 Pattern from minimal About) ---------- */
 .final-cta-v2 {
   position: relative;

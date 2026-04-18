@@ -670,6 +670,14 @@
   }
 }
 
+/* --- 10a. Mobile Specific Refinement (Strictly < 768px) --- */
+@media (max-width: 767px) {
+  .experts-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+}
+
 /* --- 11. Laptop & Desktop Tier Refinements (1024px+) --- */
 @media (min-width: 1024px) {
   

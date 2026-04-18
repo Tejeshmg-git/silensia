@@ -587,6 +587,28 @@
   }
 }
 
+/* --- Core Values Mobile Fix (Strictly < 768px) --- */
+@media (max-width: 767px) {
+  .values-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .value-item:nth-child(3) {
+    grid-column: auto !important;
+    max-width: 100% !important;
+  }
+
+  .practitioner-grid {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-xl) !important;
+  }
+
+  .practitioner-card:nth-child(3) {
+    grid-column: auto !important;
+    max-width: 100% !important;
+  }
+}
+
 
 
 /* --- Mobile Specific Refinements (Up to 480px) - LOCKED --- */
