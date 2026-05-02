@@ -14,6 +14,7 @@
   --color-primary:        hsl(218, 55%, 45%);
   --color-primary-light:  hsl(218, 55%, 60%);
   --color-primary-dark:   hsl(218, 55%, 35%);
+  --color-brand:          hsl(218, 55%, 45%); /* Consistent Brand Identity Color */
   --color-accent:         hsl(185, 75%, 45%);
   --color-accent-light:   hsl(185, 75%, 60%);
 
@@ -275,7 +276,7 @@ label, .section-tag, .badge {
   font-family: var(--font-heading);
   font-size: var(--fs-lg);
   font-weight: var(--fw-bold);
-  color: var(--color-primary);
+  color: var(--color-brand);
   letter-spacing: -0.02em;
 }
 
@@ -1575,4 +1576,51 @@ label, .section-tag, .badge {
     left: 0 !important;
     top: 4px !important;
   }
+}
+
+/* ============================================================
+RTL SUPPORT (Global)
+============================================================ */
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="rtl"] .nav-links {
+  left: auto !important;
+  right: 50% !important;
+  transform: translateX(50%) !important;
+}
+
+[dir="rtl"] .site-footer {
+  text-align: right !important;
+}
+
+[dir="rtl"] .footer-nav {
+  text-align: right !important;
+}
+
+[dir="rtl"] .social-links {
+  justify-content: flex-start !important;
+}
+
+[dir="rtl"] .sidenav-links a {
+  text-align: right !important;
+  flex-direction: row-reverse !important;
+}
+
+[dir="rtl"] .sidenav-links a i {
+  margin-right: 0 !important;
+  margin-left: var(--space-md) !important;
+}
+
+/* Premium List Global RTL */
+[dir="rtl"] .premium-list li {
+  padding-left: 0 !important;
+  padding-right: 28px !important;
+  text-align: right !important;
+}
+
+[dir="rtl"] .premium-list li::before {
+  left: auto !important;
+  right: 0 !important;
 }

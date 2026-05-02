@@ -148,7 +148,7 @@
 }
 
 #header-theme-toggle {
-  display: none !important;
+  display: flex !important;
 }
 
 /* Theme Toggle (Sidebar) */
@@ -219,7 +219,7 @@
 }
 
 .search-box input:focus {
-  border-color: var(--color-primary);
+  border-color: var(--color-brand);
   background: var(--color-bg);
   box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
   outline: none;
@@ -242,7 +242,7 @@
 
 .notif-btn:hover {
   background: var(--color-bg);
-  color: var(--color-primary);
+  color: var(--color-brand);
   border-color: var(--color-primary-light);
   box-shadow: var(--shadow-sm);
 }
@@ -253,9 +253,34 @@
   right: 10px;
   width: 10px;
   height: 10px;
-  background-color: var(--color-accent);
+  background-color: var(--color-brand);
   border: 2px solid var(--color-surface);
   border-radius: 50%;
+}
+
+.theme-toggle, .rtl-toggle {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--color-text-secondary);
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border-light);
+  cursor: pointer;
+  transition: all var(--duration-fast);
+}
+
+.theme-toggle:hover, .rtl-toggle:hover {
+  background: var(--color-bg);
+  color: var(--color-brand);
+  border-color: var(--color-brand);
+}
+
+.theme-toggle i, .rtl-toggle i {
+  width: 20px;
+  height: 20px;
 }
 
 .admin-profile {
@@ -348,7 +373,7 @@
 .icon-blue { background: rgba(99, 102, 241, 0.1); color: #6366f1; }
 .icon-teal { background: rgba(20, 184, 166, 0.1); color: #14b8a6; }
 .icon-purple { background: rgba(168, 85, 247, 0.1); color: #a855f7; }
-.icon-gold { background: rgba(234, 179, 8, 0.1); color: #eab308; }
+.icon-gold { background: hsla(218, 55%, 45%, 0.1); color: var(--color-brand); }
 
 .kpi-label {
   display: block;
@@ -481,7 +506,7 @@
 
 .progress {
   height: 100%;
-  background: var(--color-primary);
+  background: var(--color-brand);
   border-radius: inherit;
 }
 
@@ -562,7 +587,7 @@ input:checked + .slider:before {
 
 .chart-bar {
   flex: 1;
-  background: linear-gradient(to top, var(--color-primary), var(--color-primary-light));
+  background: linear-gradient(to top, var(--color-brand), var(--color-primary-light));
   border-radius: 4px 4px 0 0;
   transition: transform 0.6s var(--ease-smooth);
 }

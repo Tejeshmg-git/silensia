@@ -65,12 +65,12 @@
 
 .nav-link:hover, .nav-link.active {
   background: var(--color-surface);
-  color: var(--color-primary);
+  color: var(--color-brand);
   box-shadow: var(--shadow-sm);
 }
 
 .nav-link.active {
-  color: var(--color-primary);
+  color: var(--color-brand);
   font-weight: var(--fw-bold);
 }
 
@@ -162,7 +162,7 @@
 }
 
 .search-box input:focus {
-  border-color: var(--color-accent);
+  border-color: var(--color-brand);
   background: var(--color-bg);
   outline: none;
 }
@@ -184,7 +184,7 @@
 
 .notif-btn:hover {
   background: var(--color-surface);
-  color: var(--color-primary);
+  color: var(--color-brand);
   border-color: var(--color-primary-light);
 }
 
@@ -194,9 +194,36 @@
   right: 10px;
   width: 10px;
   height: 10px;
-  background-color: var(--color-accent);
+  background-color: var(--color-brand);
   border: 2px solid var(--color-surface);
   border-radius: 50%;
+}
+
+.theme-toggle, .rtl-toggle {
+  width: 44px !important;
+  height: 44px !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--color-text-secondary);
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border-light);
+  cursor: pointer;
+  transition: all var(--duration-fast);
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.theme-toggle:hover, .rtl-toggle:hover {
+  background: var(--color-surface);
+  color: var(--color-brand);
+  border-color: var(--color-brand);
+}
+
+.theme-toggle i, .rtl-toggle i {
+  width: 20px;
+  height: 20px;
 }
 
 .user-profile {
@@ -635,7 +662,7 @@
 }
 
 .s-clock { font-size: var(--fs-label); font-weight: var(--fw-bold); }
-.s-date-v2 { font-size: 11px; color: var(--color-primary); font-weight: var(--fw-semibold); }
+.s-date-v2 { font-size: 11px; color: var(--color-brand); font-weight: var(--fw-semibold); }
 .s-note { font-size: 10px; color: var(--color-text-muted); }
 
 /* Live Events */
@@ -699,7 +726,7 @@
 .sidebar-close span:nth-child(1) { transform: translate(-50%, -50%) rotate(45deg); }
 .sidebar-close span:nth-child(2) { transform: translate(-50%, -50%) rotate(-45deg); }
 
-.sidebar-close:hover span { background-color: var(--color-primary); }
+.sidebar-close:hover span { background-color: var(--color-brand); }
 
 .mobile-only-flex { display: none; }
 
@@ -1143,7 +1170,7 @@
 .sub-badge {
   display: inline-block;
   padding: 4px 12px;
-  background: var(--color-primary);
+  background: var(--color-brand);
   color: #fff;
   border-radius: 4px;
   font-size: var(--fs-xs);

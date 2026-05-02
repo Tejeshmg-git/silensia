@@ -1321,8 +1321,55 @@
 
 /* --- Mastery Grid Mobile Stacking (Below 540px) --- */
 @media (max-width: 539px) {
-  .mastery-grid {
+[dir="rtl"] .mastery-grid {
     grid-template-columns: 1fr !important;
     text-align: center !important;
   }
+}
+
+/* JOURNEYS RTL OVERRIDES */
+[dir="rtl"] .adaptive-grid {
+  direction: rtl;
+}
+
+[dir="rtl"] .engine-info {
+  text-align: right !important;
+}
+
+[dir="rtl"] .engine-info .section-subtitle-v2 {
+  text-align: right !important;
+  margin-right: 0 !important;
+}
+
+[dir="rtl"] .program-card {
+  direction: rtl;
+}
+
+[dir="rtl"] .program-content {
+  text-align: right !important;
+}
+
+[dir="rtl"] .program-card:nth-child(odd) .program-content {
+  padding: var(--space-xl) 0 var(--space-2xl) var(--space-xl);
+}
+
+[dir="rtl"] .program-card:nth-child(even) .program-content {
+  padding: var(--space-xl) var(--space-xl) var(--space-2xl) 0;
+}
+
+[dir="rtl"] .program-badge {
+  align-self: flex-start;
+}
+
+[dir="rtl"] .program-benefits li {
+  flex-direction: row; /* Keep icon on right in RTL context */
+  gap: 8px;
+}
+
+[dir="rtl"] .program-benefits li::before {
+  order: 2;
+}
+
+[dir="rtl"] .program-action {
+  justify-content: flex-start;
 }

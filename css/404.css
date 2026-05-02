@@ -114,7 +114,7 @@
     font-family: var(--font-heading);
     font-size: 1.25rem;
     font-weight: var(--fw-bold);
-    color: var(--color-text);
+    color: var(--color-brand);
 }
 
 .auth-back-home {

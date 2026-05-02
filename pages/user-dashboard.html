@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="../css/user-dashboard.css" />
 
   <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="dashboard-shell user-sanctuary">
 
@@ -21,7 +22,7 @@
     <div class="sidebar-header">
       <a href="../index.html" class="nav-brand">
         <svg class="nav-logo" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="36" height="36" rx="8" fill="var(--color-primary)"/>
+          <rect width="36" height="36" rx="8" fill="var(--color-brand)"/>
           <circle cx="18" cy="18" r="8" stroke="white" stroke-width="2"/>
           <circle cx="18" cy="18" r="3" fill="white"/>
         </svg>
@@ -37,25 +38,25 @@
       <ul class="nav-list">
         <li class="nav-item">
           <a href="#" class="nav-link active" data-tab="sanctuary">
-            <span class="nav-icon">✨</span>
+            <i data-lucide="sparkles" class="nav-icon"></i>
             <span class="nav-label">Sanctuary</span>
           </a>
         </li>
         <li class="nav-item">
           <a href="#" class="nav-link" data-tab="library">
-            <span class="nav-icon">🎧</span>
+            <i data-lucide="headphones" class="nav-icon"></i>
             <span class="nav-label">Neural Library</span>
           </a>
         </li>
         <li class="nav-item">
           <a href="#" class="nav-link" data-tab="insights">
-            <span class="nav-icon">🧘</span>
+            <i data-lucide="brain" class="nav-icon"></i>
             <span class="nav-label">Growth Insights</span>
           </a>
         </li>
         <li class="nav-item">
           <a href="#" class="nav-link" data-tab="coaching">
-            <span class="nav-icon">💎</span>
+            <i data-lucide="gem" class="nav-icon"></i>
             <span class="nav-label">Guided Mastery</span>
           </a>
         </li>
@@ -64,29 +65,15 @@
       <div class="nav-spacer"></div>
 
       <ul class="nav-list nav-secondary">
-        <li class="nav-item mobile-only-item">
-          <div class="nav-link theme-sidebar-toggle">
-            <span class="nav-icon">🌗</span>
-            <span class="nav-label">Dark Mode</span>
-            <label class="switch"><input type="checkbox" id="sidebar-theme-checkbox"><span class="slider"></span></label>
-          </div>
-        </li>
         <li class="nav-item">
           <a href="#" class="nav-link" data-tab="settings">
-
-            <span class="nav-icon">⚙️</span>
+            <i data-lucide="settings" class="nav-icon"></i>
             <span class="nav-label">Settings</span>
           </a>
         </li>
         <li class="nav-item">
-          <a href="../index.html" class="nav-link back-home">
-            <span class="nav-icon">🏠</span>
-            <span class="nav-label">Back to Home</span>
-          </a>
-        </li>
-        <li class="nav-item">
           <a href="login.html" class="nav-link logout-link">
-            <span class="nav-icon">🚪</span>
+            <i data-lucide="log-out" class="nav-icon"></i>
             <span class="nav-label">Logout</span>
           </a>
         </li>
@@ -120,7 +107,13 @@
           </svg>
           <span class="notif-badge"></span>
         </button>
-        <button class="theme-toggle" aria-label="Toggle theme" id="header-theme-toggle"></button>
+        <button class="theme-toggle" aria-label="Toggle theme" id="header-theme-toggle">
+          <i data-lucide="moon" class="theme-icon-dark"></i>
+          <i data-lucide="sun" class="theme-icon-light"></i>
+        </button>
+        <button class="rtl-toggle" aria-label="Toggle RTL" id="header-rtl-toggle">
+          <i data-lucide="languages"></i>
+        </button>
         <div class="user-profile">
           <div class="user-info">
              <span class="user-name">Aris Thorne</span>
@@ -146,7 +139,7 @@
             <p class="hero-desc">Your neural recovery is at 84%. Ready for a morning focus sequence?</p>
             <div class="hero-actions">
                <button class="btn-filled">Resume Last Journey</button>
-               <span class="streak-badge">🔥 12 Day Streak</span>
+               <span class="streak-badge"><i data-lucide="flame" style="width: 14px; height: 14px; vertical-align: middle; margin-right: 4px;"></i> 12 Day Streak</span>
             </div>
           </div>
           <div class="hero-visual">
@@ -204,20 +197,20 @@
               
               <div class="tracks-grid">
                  <div class="t-card">
-                    <div class="t-icon">🏔️</div>
+                    <div class="t-icon"><i data-lucide="mountain"></i></div>
                     <div class="t-info">
                        <strong>Arctic Stillness</strong>
                        <span>Binaural Beats • 30m</span>
                     </div>
-                    <button class="t-play">▶</button>
+                    <button class="t-play"><i data-lucide="play"></i></button>
                  </div>
                  <div class="t-card">
-                    <div class="t-icon">🌌</div>
+                    <div class="t-icon"><i data-lucide="star"></i></div>
                     <div class="t-info">
                        <strong>Stellar Convergence</strong>
                        <span>Deep Theta • 60m</span>
                     </div>
-                    <button class="t-play">▶</button>
+                    <button class="t-play"><i data-lucide="play"></i></button>
                  </div>
               </div>
            </div>
@@ -228,16 +221,13 @@
                  <h3>Neural Milestones</h3>
               </div>
               <ul class="milestone-list">
-                 <li class="milestone-item">
-                    <div class="m-check">✓</div>
+                 <li class="milestone-item"><div class="m-check"><i data-lucide="check" style="width: 14px; height: 14px;"></i></div>
                     <div class="m-text">First 100m Synchronized</div>
                  </li>
-                 <li class="milestone-item">
-                    <div class="m-check">✓</div>
+                 <li class="milestone-item"><div class="m-check"><i data-lucide="check" style="width: 14px; height: 14px;"></i></div>
                     <div class="m-text">Alpha-State Mastery</div>
                  </li>
-                 <li class="milestone-item locked">
-                    <div class="m-check">?</div>
+                 <li class="milestone-item locked"><div class="m-check"><i data-lucide="lock" style="width: 14px; height: 14px;"></i></div>
                     <div class="m-text">Obsidian Depth (Locked)</div>
                  </li>
               </ul>
@@ -422,5 +412,9 @@
 
   <script src="../js/global.js"></script>
   <script src="../js/user-dashboard.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
 </body>
 </html>
+

@@ -104,7 +104,7 @@
     font-size: 1.5rem;
     font-weight: var(--fw-bold);
     letter-spacing: 1px;
-    color: var(--color-text);
+    color: var(--color-brand);
 }
 
 .auth-card h1 {
@@ -350,4 +350,54 @@
         width: 300px;
         height: 300px;
     }
+}
+
+/* ============================================================
+   RTL SUPPORT FOR AUTH PAGES
+   ============================================================ */
+[dir="rtl"] .auth-card {
+  text-align: right !important;
+}
+
+[dir="rtl"] .auth-header h1,
+[dir="rtl"] .auth-header p {
+  text-align: center !important;
+}
+
+[dir="rtl"] .auth-group label {
+  display: block;
+  text-align: right !important;
+}
+
+[dir="rtl"] .auth-input-wrapper input {
+  text-align: right !important;
+  direction: rtl !important;
+  padding-left: 18px !important;
+  padding-right: 18px !important;
+}
+
+[dir="rtl"] .auth-input-wrapper input[type="password"] {
+  padding-left: 50px !important; /* Room for eye icon on the left */
+  padding-right: 18px !important;
+}
+
+[dir="rtl"] .pw-toggle {
+  right: auto !important;
+  left: 18px !important;
+}
+
+[dir="rtl"] .auth-options {
+  flex-direction: row-reverse !important;
+}
+
+[dir="rtl"] .auth-remember {
+  flex-direction: row-reverse !important;
+}
+
+[dir="rtl"] .auth-forgot {
+  text-align: left;
+}
+
+[dir="rtl"] .auth-footer {
+  text-align: center;
 }

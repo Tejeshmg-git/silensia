@@ -911,3 +911,105 @@
     .neural-lab-grid { grid-template-columns: 1fr; gap: 40px; }
     .lab-visual { height: 300px; padding: 40px; }
 }
+
+/* ============================================================
+RTL SUPPORT OVERRIDES
+============================================================ */
+[dir="rtl"] .hero {
+  flex-direction: row-reverse !important;
+}
+
+[dir="rtl"] .hero-content {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+[dir="rtl"] .hero-cta {
+  justify-content: flex-start;
+}
+
+[dir="rtl"] .hero-text {
+  margin-left: auto !important;
+  margin-right: 0 !important;
+  text-align: right !important;
+}
+
+/* Neural Frequency Lab RTL */
+[dir="rtl"] .neural-lab-container {
+  direction: rtl;
+}
+
+[dir="rtl"] .lab-content {
+  text-align: right !important;
+}
+
+[dir="rtl"] .tech-item {
+  text-align: right !important;
+}
+
+[dir="rtl"] .tech-info {
+  text-align: right !important;
+}
+
+/* Acoustic Architecture RTL (Home V1) */
+[dir="rtl"] .acoustic-grid,
+[dir="rtl"] .sanctuary-grid {
+  direction: rtl;
+}
+
+[dir="rtl"] .acoustic-info,
+[dir="rtl"] .sanctuary-info {
+  text-align: right !important;
+}
+
+[dir="rtl"] .premium-list li {
+  padding-right: 20px;
+  padding-left: 0;
+  text-align: right;
+}
+
+[dir="rtl"] .premium-list li::before {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .section-header,
+[dir="rtl"] .benefit-item,
+[dir="rtl"] .benefit-text-wrap,
+[dir="rtl"] .testimonial-card,
+[dir="rtl"] .author-info,
+[dir="rtl"] .lab-content,
+[dir="rtl"] .tech-item,
+[dir="rtl"] .tech-info,
+[dir="rtl"] .section-tag {
+  text-align: right !important;
+}
+
+[dir="rtl"] .lab-content p {
+  margin-left: auto !important;
+  margin-right: 0 !important;
+  direction: rtl !important;
+  text-align: right !important;
+}
+
+[dir="rtl"] .lab-visual::before {
+  left: auto !important;
+  right: 30px !important;
+}
+
+/* Responsive RTL Adjustments */
+@media (max-width: 991px) {
+ [dir="rtl"] .hero, 
+ [dir="rtl"] .benefits {
+ text-align: right !important;
+ }
+ 
+ [dir="rtl"] .hero-cta {
+ justify-content: flex-start !important;
+ }
+ 
+ [dir="rtl"] .hero-text {
+ margin-right: 0 !important;
+ margin-left: auto !important;
+ }
+}

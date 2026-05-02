@@ -17,8 +17,8 @@
   const sidenav           = document.querySelector('.sidenav');
   const sidenavOverlay    = document.querySelector('.sidenav-overlay');
   const sidenavClose      = document.querySelector('.sidenav-close');
-  const themeToggles      = document.querySelectorAll('.theme-toggle');
-  const rtlToggles        = document.querySelectorAll('.rtl-toggle');
+  let themeToggles      = document.querySelectorAll('.theme-toggle');
+  let rtlToggles        = document.querySelectorAll('.rtl-toggle');
   const allNavLinks        = document.querySelectorAll('.nav-links a, .sidenav-links a');
 
   /* ==========================================================
@@ -191,6 +191,10 @@
      8. EVENT LISTENERS
      ========================================================== */
   function init() {
+    // Re-query toggles in case they were added/modified
+    themeToggles = document.querySelectorAll('.theme-toggle');
+    rtlToggles = document.querySelectorAll('.rtl-toggle');
+
     // Theme
     applyTheme(getPreferredTheme());
     themeToggles.forEach(btn => btn.addEventListener('click', toggleTheme));

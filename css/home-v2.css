@@ -945,3 +945,144 @@
 }
 
 
+
+/* ============================================================
+RTL SUPPORT OVERRIDES
+============================================================ */
+[dir="rtl"] .section-header-v2 {
+ text-align: right !important;
+}
+
+[dir="rtl"] .path-card {
+ text-align: right !important;
+}
+
+[dir="rtl"] .science-list li {
+ padding-left: 0 !important;
+ padding-right: 24px !important;
+ text-align: right !important;
+}
+
+[dir="rtl"] .science-list li::before {
+ left: auto !important;
+ right: 0 !important;
+}
+
+[dir="rtl"] .audio-player-ui {
+ text-align: right !important;
+}
+
+[dir="rtl"] .expert-profile {
+ text-align: right !important;
+}
+
+[dir="rtl"] .expert-info {
+ align-items: flex-start !important;
+}
+
+[dir="rtl"] .faq-sidebar {
+ text-align: right !important;
+}
+
+[dir="rtl"] .faq-pointer {
+ right: auto !important;
+ left: -20px !important;
+ transform: translateY(-50%) rotate(180deg) !important;
+}
+
+[dir="rtl"] .faq-item-text {
+ text-align: right !important;
+}
+/* ---------- RTL OVERRIDES ---------- */
+[dir="rtl"] .v2-hero-content {
+  text-align: center; /* V2 hero is centered anyway */
+}
+
+[dir="rtl"] .hero-btns {
+  /* Natural flow */
+}
+
+[dir="rtl"] .path-card {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+[dir="rtl"] .path-card::before {
+  transform-origin: right;
+}
+
+[dir="rtl"] .science-wrap {
+  direction: rtl;
+}
+
+[dir="rtl"] .science-list li {
+  padding-left: 0 !important;
+  padding-right: 24px !important;
+  text-align: right !important;
+}
+
+[dir="rtl"] .science-list li::before {
+  left: auto !important;
+  right: 0 !important;
+}
+
+[dir="rtl"] .audio-container {
+  direction: rtl;
+}
+
+[dir="rtl"] .accordion-btn-v2 {
+  text-align: right !important;
+  flex-direction: row-reverse;
+}
+
+/* Home V2 Section RTLs */
+[dir="rtl"] .science-wrap,
+[dir="rtl"] .acoustic-grid,
+[dir="rtl"] .somatic-grid {
+  direction: rtl;
+}
+
+[dir="rtl"] .science-content,
+[dir="rtl"] .acoustic-info,
+[dir="rtl"] .somatic-info {
+  text-align: right !important;
+}
+
+[dir="rtl"] .science-content .section-subtitle-v2,
+[dir="rtl"] .acoustic-info .section-subtitle-v2,
+[dir="rtl"] .somatic-info .section-subtitle-v2 {
+  text-align: right !important;
+  direction: rtl !important;
+  margin-right: 0 !important;
+}
+
+[dir="rtl"] .section-title-v2 {
+  direction: rtl !important;
+}
+
+[dir="rtl"] .feature-pill-list {
+  justify-content: flex-start;
+}
+
+/* Expert Grid RTL */
+[dir="rtl"] .experts-grid {
+  direction: rtl;
+}
+
+[dir="rtl"] .expert-profile {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+[dir="rtl"] .expert-info {
+  align-items: flex-start !important;
+}
+
+[dir="rtl"] .expert-tags {
+  justify-content: flex-start;
+}
+
+[dir="rtl"] .audio-player-ui {
+  text-align: right !important;
+  direction: rtl !important;
+}

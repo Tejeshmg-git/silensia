@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="../css/admin-dashboard.css" />
 
   <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="admin-shell">
 
@@ -21,7 +22,7 @@
     <div class="sidebar-header">
       <a href="../index.html" class="nav-brand">
         <svg class="nav-logo" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="36" height="36" rx="8" fill="var(--color-primary)"/>
+          <rect width="36" height="36" rx="8" fill="var(--color-brand)"/>
           <path d="M18 8C12.48 8 8 12.48 8 18s4.48 10 10 10 10-4.48 10-10S23.52 8 18 8zm0 16c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z" fill="white" opacity="0.9"/>
           <circle cx="18" cy="18" r="3" fill="white"/>
         </svg>
@@ -37,31 +38,31 @@
       <ul class="nav-list">
         <li class="nav-item">
           <a href="#" class="nav-link active" data-tab="overview">
-            <span class="nav-icon">📊</span>
+            <i data-lucide="activity" class="nav-icon"></i>
             <span class="nav-label">Overview</span>
           </a>
         </li>
         <li class="nav-item">
           <a href="#" class="nav-link" data-tab="users">
-            <span class="nav-icon">👥</span>
+            <i data-lucide="users" class="nav-icon"></i>
             <span class="nav-label">User Directory</span>
           </a>
         </li>
         <li class="nav-item">
           <a href="#" class="nav-link" data-tab="lab">
-            <span class="nav-icon">🎧</span>
+            <i data-lucide="headphones" class="nav-icon"></i>
             <span class="nav-label">Journey Lab</span>
           </a>
         </li>
         <li class="nav-item">
           <a href="#" class="nav-link" data-tab="intelligence">
-            <span class="nav-icon">📈</span>
+            <i data-lucide="trending-up" class="nav-icon"></i>
             <span class="nav-label">Intelligence</span>
           </a>
         </li>
         <li class="nav-item">
           <a href="#" class="nav-link" data-tab="transactions">
-            <span class="nav-icon">💳</span>
+            <i data-lucide="credit-card" class="nav-icon"></i>
             <span class="nav-label">Transactions</span>
           </a>
         </li>
@@ -71,28 +72,14 @@
 
       <ul class="nav-list nav-secondary">
         <li class="nav-item">
-          <div class="nav-link theme-sidebar-toggle">
-            <span class="nav-icon">🌗</span>
-            <span class="nav-label">Dark Mode</span>
-            <label class="switch"><input type="checkbox" id="sidebar-theme-checkbox"><span class="slider"></span></label>
-          </div>
-        </li>
-        <li class="nav-item">
           <a href="#" class="nav-link" data-tab="settings">
-
-            <span class="nav-icon">⚙️</span>
+            <i data-lucide="settings" class="nav-icon"></i>
             <span class="nav-label">Settings</span>
           </a>
         </li>
         <li class="nav-item">
-          <a href="../index.html" class="nav-link back-home">
-            <span class="nav-icon">🏠</span>
-            <span class="nav-label">Back to Home</span>
-          </a>
-        </li>
-        <li class="nav-item">
           <a href="login.html" class="nav-link logout-link">
-            <span class="nav-icon">🚪</span>
+            <i data-lucide="log-out" class="nav-icon"></i>
             <span class="nav-label">Logout</span>
           </a>
         </li>
@@ -126,7 +113,13 @@
           </svg>
           <span class="notif-badge"></span>
         </button>
-        <button class="theme-toggle" aria-label="Toggle theme" id="header-theme-toggle"></button>
+        <button class="theme-toggle" aria-label="Toggle theme" id="header-theme-toggle">
+          <i data-lucide="moon" class="theme-icon-dark"></i>
+          <i data-lucide="sun" class="theme-icon-light"></i>
+        </button>
+        <button class="rtl-toggle" aria-label="Toggle RTL" id="header-rtl-toggle">
+          <i data-lucide="languages"></i>
+        </button>
         <div class="admin-profile">
           <div class="profile-info">
             <span class="p-name">Dr. Aris Thorne</span>
@@ -147,7 +140,7 @@
         <!-- KPI Row -->
         <div class="kpi-grid">
           <div class="kpi-card reveal">
-            <div class="kpi-icon icon-blue">🌐</div>
+            <div class="kpi-icon icon-blue"><i data-lucide="clock"></i></div>
             <div class="kpi-data">
               <span class="kpi-label">Active Minds</span>
               <h2 class="kpi-value">1,284</h2>
@@ -155,7 +148,7 @@
             </div>
           </div>
           <div class="kpi-card reveal">
-            <div class="kpi-icon icon-teal">💰</div>
+            <div class="kpi-icon icon-teal"><i data-lucide="test-tube"></i></div>
             <div class="kpi-data">
               <span class="kpi-label">Monthly Revenue</span>
               <h2 class="kpi-value">$42.8k</h2>
@@ -163,7 +156,7 @@
             </div>
           </div>
           <div class="kpi-card reveal">
-            <div class="kpi-icon icon-purple">🎧</div>
+            <div class="kpi-icon icon-purple"><i data-lucide="refresh-cw"></i></div>
             <div class="kpi-data">
               <span class="kpi-label">Journey Completion</span>
               <h2 class="kpi-value">94.5%</h2>
@@ -171,7 +164,7 @@
             </div>
           </div>
           <div class="kpi-card reveal">
-            <div class="kpi-icon icon-gold">⭐</div>
+            <div class="kpi-icon icon-gold"><i data-lucide="star"></i></div>
             <div class="kpi-data">
               <span class="kpi-label">Avg. Rating</span>
               <h2 class="kpi-value">4.92</h2>
@@ -350,21 +343,21 @@
       <section id="tab-intelligence" class="admin-tab-content">
         <div class="kpi-grid">
            <div class="kpi-card">
-              <div class="kpi-icon icon-blue">⏰</div>
+              <div class="kpi-icon icon-blue"><i data-lucide="clock"></i></div>
               <div class="kpi-data">
                  <span class="kpi-label">Peak Awareness Hours</span>
                  <h2 class="kpi-value">11:00 AM</h2>
               </div>
            </div>
            <div class="kpi-card">
-              <div class="kpi-icon icon-teal">🧬</div>
+              <div class="kpi-icon icon-teal"><i data-lucide="test-tube"></i></div>
               <div class="kpi-data">
                  <span class="kpi-label">Top Frequency Range</span>
                  <h2 class="kpi-value">Alpha (8-13Hz)</h2>
               </div>
            </div>
            <div class="kpi-card">
-              <div class="kpi-icon icon-purple">🔄</div>
+              <div class="kpi-icon icon-purple"><i data-lucide="refresh-cw"></i></div>
               <div class="kpi-data">
                  <span class="kpi-label">User Retention</span>
                  <h2 class="kpi-value">82%</h2>
@@ -499,5 +492,9 @@
 
   <script src="../js/global.js"></script>
   <script src="../js/admin-dashboard.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
 </body>
 </html>
+

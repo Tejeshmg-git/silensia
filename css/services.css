@@ -1203,3 +1203,87 @@
     grid-template-columns: 1fr !important;
   }
 }
+/* ---------- RTL OVERRIDES ---------- */
+[dir="rtl"] .services-hero-split {
+  direction: rtl;
+}
+
+[dir="rtl"] .hero-text-side {
+  text-align: right !important;
+}
+
+[dir="rtl"] .hero-cta {
+  justify-content: flex-start !important;
+}
+
+[dir="rtl"] .pricing-card {
+  text-align: right !important;
+}
+
+[dir="rtl"] .tier-features li {
+  /* Natural flow handles it: Icon on right, Text on left */
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+[dir="rtl"] .coaching-grid {
+  direction: rtl;
+}
+
+[dir="rtl"] .coaching-text {
+  text-align: right !important;
+}
+
+[dir="rtl"] .coaching-details li {
+  padding-left: 0;
+  padding-right: 25px;
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+[dir="rtl"] .coaching-details li::before {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .ecosys-info {
+  text-align: right !important;
+}
+
+[dir="rtl"] .ecosys-brands {
+  justify-content: flex-start !important;
+}
+
+[dir="rtl"] .council-item {
+  text-align: right !important;
+}
+
+[dir="rtl"] .enterprise-info {
+  text-align: right !important;
+}
+
+[dir="rtl"] .enterprise-actions {
+  justify-content: flex-start !important;
+}
+
+[dir="rtl"] .accordion-btn-v2 {
+  text-align: right !important;
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .accordion-content-v2 p {
+  text-align: right !important;
+}
+
+[dir="rtl"] .cta-hybrid-card {
+  text-align: right !important;
+  direction: rtl;
+}
+
+[dir="rtl"] .cta-btns-v2 {
+  justify-content: flex-start !important;
+}
+
+[dir="rtl"] .cta-visual-metrics {
+  flex-direction: row-reverse;
+}

@@ -97,12 +97,10 @@ body {
     font-size: 1.25rem;
     font-weight: var(--fw-bold);
     letter-spacing: 1px;
-    color: #fff; /* Static white for CS atmospheric default */
+    color: var(--color-brand);
 }
 
-[data-theme="light"] .auth-brand-name {
-    color: var(--color-text);
-}
+
 
 /* --- Main Content --- */
 .cs-content {

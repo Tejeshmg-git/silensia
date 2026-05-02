@@ -201,6 +201,82 @@
   direction: ltr; /* Reset text direction to Left-To-Right inside grid items */
 }
 
+/* RTL OVERRIDES */
+[dir="rtl"] .approach-row {
+  text-align: right !important;
+}
+
+[dir="rtl"] .approach-row.reverse {
+  direction: ltr !important; /* Force LTR grid flow in RTL mode to achieve the alternate flip */
+}
+
+[dir="rtl"] .approach-row.reverse > * {
+  direction: rtl !important; /* Ensure text remains RTL inside the forced LTR row */
+}
+[dir="rtl"] .about-hero-content {
+  text-align: center; /* Hero is centered */
+}
+
+[dir="rtl"] .mv-card {
+  text-align: right !important;
+}
+
+[dir="rtl"] .mv-icon {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+[dir="rtl"] .value-item {
+  text-align: right !important;
+}
+
+[dir="rtl"] .value-number {
+  right: auto;
+  left: 10px;
+}
+
+[dir="rtl"] .ethical-wrapper {
+  direction: rtl;
+}
+
+[dir="rtl"] .ethical-info {
+  text-align: right !important;
+}
+
+[dir="rtl"] .e-feat {
+  text-align: right;
+}
+
+[dir="rtl"] .e-mini-stat {
+  text-align: right;
+}
+
+[dir="rtl"] .ethical-stats-mini {
+  justify-content: flex-start;
+}
+
+/* Global Resonance RTL */
+[dir="rtl"] .resonance-grid {
+  direction: rtl;
+}
+
+[dir="rtl"] .resonance-item {
+  text-align: right !important;
+}
+
+/* Practitioner Grid RTL */
+[dir="rtl"] .practitioner-grid {
+  direction: rtl;
+}
+
+[dir="rtl"] .practitioner-card {
+  text-align: right !important;
+}
+
+[dir="rtl"] .p-info {
+  text-align: right !important;
+}
+
 .approach-visual {
   height: 400px;
   border-radius: var(--radius-xl);
