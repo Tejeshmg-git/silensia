@@ -1361,15 +1361,30 @@
   align-self: flex-start;
 }
 
+[dir="rtl"] .program-benefits ul {
+  direction: rtl;
+  text-align: right;
+}
+
 [dir="rtl"] .program-benefits li {
-  flex-direction: row; /* Keep icon on right in RTL context */
-  gap: 8px;
+  justify-content: flex-start;
+  text-align: right;
 }
 
 [dir="rtl"] .program-benefits li::before {
-  order: 2;
+  order: 0; /* Ensure bullet is at the start (right) in RTL */
 }
 
 [dir="rtl"] .program-action {
   justify-content: flex-start;
+}
+
+[dir="rtl"] .program-details {
+  text-align: right !important;
+  direction: rtl;
+  padding: 0;
+}
+
+[dir="rtl"] .program-details li {
+  text-align: right !important;
 }
