@@ -370,14 +370,16 @@ label, .section-tag, .badge {
   font-size: var(--fs-sm);
   font-weight: var(--fw-semibold);
   color: #fff;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  background-color: var(--color-brand);
   border-radius: var(--radius-full);
   transition: transform var(--duration-fast) var(--ease-smooth),
+              background-color var(--duration-fast) var(--ease-smooth),
               box-shadow var(--duration-fast) var(--ease-smooth);
 }
 
 .nav-cta:hover {
   transform: translateY(-1px);
+  background-color: hsl(218, 55%, 50%); /* slightly lighter brand color for interactive hover */
   box-shadow: 0 4px 16px hsla(218, 55%, 45%, 0.35);
 }
 
@@ -711,15 +713,17 @@ label, .section-tag, .badge {
   font-size: var(--fs-base);
   font-weight: var(--fw-semibold);
   color: #fff;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  background-color: var(--color-brand);
   border-radius: var(--radius-md);
   flex-shrink: 0;
   transition: transform var(--duration-fast) var(--ease-smooth),
+              background-color var(--duration-fast) var(--ease-smooth),
               box-shadow var(--duration-fast) var(--ease-smooth);
 }
 
 .sidenav-cta:hover {
   transform: translateY(-1px);
+  background-color: hsl(218, 55%, 50%); /* slightly lighter brand color for interactive hover */
   box-shadow: 0 4px 16px hsla(218, 55%, 45%, 0.35);
 }
 
